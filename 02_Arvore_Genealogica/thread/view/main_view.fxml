@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
@@ -13,51 +14,113 @@
             <Image url="@../img/castle.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="126.0" fitWidth="112.0" layoutX="259.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFather" fitHeight="126.0" fitWidth="112.0" layoutX="259.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/PAI.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="394.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFilho1" fitHeight="112.0" fitWidth="112.0" layoutX="394.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/filho1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="126.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFilho3" fitHeight="112.0" fitWidth="112.0" layoutX="126.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/filho3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="259.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFilho2" fitHeight="112.0" fitWidth="112.0" layoutX="259.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/filho2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="118.0" fitWidth="121.0" layoutX="394.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgNeto1" fitHeight="118.0" fitWidth="121.0" layoutX="394.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/neto1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="394.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgBisneto" fitHeight="112.0" fitWidth="112.0" layoutX="394.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/bisneto1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="126.0" fitWidth="112.0" layoutX="259.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgNeto2" fitHeight="126.0" fitWidth="112.0" layoutX="259.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/neto2.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="738.0" layoutY="-19.0" prefHeight="656.0" prefWidth="446.0" style="-fx-background-color: WHITE;">
          <children>
-            <Label layoutX="14.0" layoutY="27.0" text="Pai" />
-            <Button layoutX="199.0" layoutY="602.0" mnemonicParsing="false" text="Iniciar" />
-            <Label layoutX="12.0" layoutY="57.0" text="Filho 1" />
-            <Label layoutX="12.0" layoutY="84.0" text="Filho 2" />
-            <Label layoutX="12.0" layoutY="113.0" text="Filho 3" />
-            <Label layoutX="12.0" layoutY="139.0" text="Neto 1" />
-            <Label layoutX="12.0" layoutY="166.0" text="Neto 2" />
-            <Label layoutX="14.0" layoutY="193.0" text="Bisneto 1" />
+            <Label layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="59.0" text="Pai">
+               <font>
+                  <Font size="41.0" />
+               </font></Label>
+            <Button fx:id="buttonStart" layoutX="199.0" layoutY="602.0" mnemonicParsing="false" text="Iniciar" />
+            <Label fx:id="labelFatherAge" layoutX="338.0" layoutY="27.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="86.0" prefHeight="48.0" prefWidth="125.0" text="Filho 1">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSon1Age" layoutX="338.0" layoutY="86.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="145.0" prefHeight="48.0" prefWidth="125.0" text="Filho 2">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSon2Age" layoutX="338.0" layoutY="145.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="204.0" prefHeight="48.0" prefWidth="125.0" text="Filho 3">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="263.0" prefHeight="48.0" prefWidth="125.0" text="Neto 1">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="328.0" prefHeight="48.0" prefWidth="125.0" text="Neto 2">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="387.0" prefHeight="59.0" prefWidth="146.0" text="Bisneto">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSon3Age" layoutX="338.0" layoutY="204.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelGrandson1Age" layoutX="338.0" layoutY="263.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelGrandson2Age" layoutX="338.0" layoutY="328.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelGreatGrandsonAge" layoutX="338.0" layoutY="387.0" text="0">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
