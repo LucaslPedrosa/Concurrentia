@@ -70,10 +70,14 @@ public class MainController implements Initializable {
   // Methods
 
   public void slashMusicPlays(){
+    try{
     Media media = new Media(Paths.get("util/champions.mp3").toUri().toString());
     mediaPlayer = new MediaPlayer(media);
     mediaPlayer.setVolume(0.3);
     mediaPlayer.play();
+    }catch(Exception e){
+      System.out.println(e.getMessage());
+    }
   }
 
   public void killFather(){
