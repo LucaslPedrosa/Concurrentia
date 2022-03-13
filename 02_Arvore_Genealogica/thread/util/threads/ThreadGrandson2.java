@@ -12,6 +12,7 @@ public class ThreadGrandson2 extends Thread{
     controller.setGrandson2Visible();
     increaseAge(33);
     System.out.println("Morre o segundo neto aos " + age + " anos");
+    controller.killGrandson2();
 
   }
 

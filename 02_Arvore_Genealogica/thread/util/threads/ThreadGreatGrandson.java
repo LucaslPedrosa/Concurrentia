@@ -12,7 +12,7 @@ public class ThreadGreatGrandson extends Thread{
     controller.setGreatGrandsonVisible();
     increaseAge(12);
     System.out.println("Morre aos " + age + " anos o bisneneto");
-
+    controller.killGreatGrandson();
   }
 
   public void increaseAge(int much){

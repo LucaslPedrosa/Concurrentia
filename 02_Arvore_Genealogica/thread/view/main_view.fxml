@@ -55,7 +55,14 @@
                <font>
                   <Font size="41.0" />
                </font></Label>
-            <Button fx:id="buttonStart" layoutX="199.0" layoutY="602.0" mnemonicParsing="false" text="Iniciar" />
+            <Button fx:id="buttonStart" layoutX="199.0" layoutY="602.0" mnemonicParsing="false" style="-fx-background-color: WHITE;">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/start.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Label fx:id="labelFatherAge" layoutX="338.0" layoutY="27.0" text="0">
                <font>
                   <Font size="41.0" />

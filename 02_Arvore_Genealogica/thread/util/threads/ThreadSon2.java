@@ -22,6 +22,7 @@ public class ThreadSon2 extends Thread{
     increaseAge(35);
 
     System.out.println("Segundo filho morre aos 55 anos");
+    controller.killSon2();
 
   }
 

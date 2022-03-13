@@ -12,6 +12,7 @@ public class ThreadSon3 extends Thread{
     controller.setSon3Visible();
     increaseAge(55);
     System.out.println("Morre o filho 3 aos " + age + " anos");
+    controller.killSon3();
 
   }
 

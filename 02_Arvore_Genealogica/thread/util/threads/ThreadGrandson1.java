@@ -18,6 +18,7 @@ public class ThreadGrandson1 extends Thread{
 
     increaseAge(5);
     System.out.println("Morre o neto 1 aos " + age + " anos");
+    controller.killGrandson1();
 
   }
 

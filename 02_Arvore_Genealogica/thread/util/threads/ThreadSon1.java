@@ -20,7 +20,7 @@ public class ThreadSon1 extends Thread{
 
     increaseAge(45);
     System.out.println("Primeiro filho morre aos " + age + " anos");
-
+    controller.killSon1();
   }
 
   // Methods

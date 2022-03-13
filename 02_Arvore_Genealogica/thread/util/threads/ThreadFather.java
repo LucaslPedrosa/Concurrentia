@@ -12,26 +12,30 @@ public class ThreadFather extends Thread {
   public void run(){
     controller.setFatherVisible();
 
-    increaseAge(23); // Father now is 23 years old
+    increaseAge(22); // Father now is 22 years old
 
-    ThreadSon1 son1 = new ThreadSon1();
-    son1.setController(controller);
-    son1.start();
+    ThreadSon1 son1 = new ThreadSon1(); // Son thread created
+    son1.setController(controller); // Son controller set
+    son1.start(); // start of son thread
     System.out.println("O pai tem o primeiro filho aos " + age + " anos");
-    increaseAge(2); // Father now is 25 years old
-    ThreadSon2 son2 = new ThreadSon2();
-    son2.setController(controller);
-    son2.start();
+    
+    increaseAge(3); // Father now is 25 years old
+    
+    ThreadSon2 son2 = new ThreadSon2(); //Son 2 thread created
+    son2.setController(controller); // son controller set
+    son2.start(); // Son 2 start
     System.out.println("O pai tem o segundo filho aos " + age + " anos");
+    
     increaseAge(7); // Father now is 32 years old
 
-    ThreadSon3 son3 = new ThreadSon3();
-    son3.setController(controller);
-    son3.start();
+    ThreadSon3 son3 = new ThreadSon3(); // Third and last son
+    son3.setController(controller); // Controller set
+    son3.start(); // start of thread
     System.out.println("O pai tem o terceiro filho aos " + age + " anos");
 
-    increaseAge(58);
+    increaseAge(58);  // last years
     System.out.println("Pai morre aos " + age + " anos");
+    controller.killFather(); // this should change the father img
 
   }
 
