@@ -9,6 +9,15 @@ public class ThreadGrandson1 extends Thread{
 
   @Override
   public void run(){
+    controller.setGrandson1Visible();
+    increaseAge(30);
+
+    ThreadGreatGrandson greatGrandson = new ThreadGreatGrandson();
+    greatGrandson.setController(controller);
+    greatGrandson.start();
+
+    increaseAge(5);
+    System.out.println("Morre o neto 1 aos " + age + " anos");
 
   }
 
@@ -22,7 +31,7 @@ public class ThreadGrandson1 extends Thread{
       }
       setAge((getAge()+1));
       Platform.runLater( () -> {
-        controller.setFatherAge(age);
+        controller.setGrandson1Age(age);
       });
     }
   }

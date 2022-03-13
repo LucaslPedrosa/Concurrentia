@@ -10,6 +10,8 @@ public class ThreadSon3 extends Thread{
   @Override
   public void run(){
     controller.setSon3Visible();
+    increaseAge(55);
+    System.out.println("Morre o filho 3 aos " + age + " anos");
 
   }
 
@@ -23,7 +25,7 @@ public class ThreadSon3 extends Thread{
       }
       setAge((getAge()+1));
       Platform.runLater( () -> {
-        controller.setFatherAge(age);
+        controller.setSon3Age(age);
       });
     }
   }

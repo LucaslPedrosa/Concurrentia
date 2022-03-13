@@ -11,6 +11,18 @@ public class ThreadSon2 extends Thread{
   public void run(){
     controller.setSon2Visible();
 
+    increaseAge(20);
+
+    ThreadGrandson2 grandson2 = new ThreadGrandson2();
+    grandson2.setController(controller);
+    grandson2.start();
+
+    System.out.println("Nasce o segundo neto");
+
+    increaseAge(35);
+
+    System.out.println("Segundo filho morre aos 55 anos");
+
   }
 
   public void increaseAge(int much){
@@ -23,7 +35,7 @@ public class ThreadSon2 extends Thread{
       }
       setAge((getAge()+1));
       Platform.runLater( () -> {
-        controller.setFatherAge(age);
+        controller.setSon2Age(age);
       });
     }
   }

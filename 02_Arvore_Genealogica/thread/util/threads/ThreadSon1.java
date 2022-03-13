@@ -14,16 +14,12 @@ public class ThreadSon1 extends Thread{
     increaseAge(16);
 
     ThreadGrandson1 grandSon1 = new ThreadGrandson1();
+    grandSon1.setController(controller);
     grandSon1.start();
     System.out.println("Nasce o neto 1");
 
     increaseAge(45);
-
-    System.out.println("Prim");
-
-
-
-
+    System.out.println("Primeiro filho morre aos " + age + " anos");
 
   }
 

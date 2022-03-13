@@ -9,6 +9,9 @@ public class ThreadGrandson2 extends Thread{
 
   @Override
   public void run(){
+    controller.setGrandson2Visible();
+    increaseAge(33);
+    System.out.println("Morre o segundo neto aos " + age + " anos");
 
   }
 
@@ -22,7 +25,7 @@ public class ThreadGrandson2 extends Thread{
       }
       setAge((getAge()+1));
       Platform.runLater( () -> {
-        controller.setFatherAge(age);
+        controller.setGrandson2Age(age);
       });
     }
   }

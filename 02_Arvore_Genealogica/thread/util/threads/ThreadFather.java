@@ -17,21 +17,21 @@ public class ThreadFather extends Thread {
     ThreadSon1 son1 = new ThreadSon1();
     son1.setController(controller);
     son1.start();
-    System.out.println("O pai tem o primeiro filho aos 23 anos");
+    System.out.println("O pai tem o primeiro filho aos " + age + " anos");
     increaseAge(2); // Father now is 25 years old
     ThreadSon2 son2 = new ThreadSon2();
     son2.setController(controller);
     son2.start();
-    System.out.println("O pai tem o segundo filho aos 25 anos");
+    System.out.println("O pai tem o segundo filho aos " + age + " anos");
     increaseAge(7); // Father now is 32 years old
 
     ThreadSon3 son3 = new ThreadSon3();
     son3.setController(controller);
     son3.start();
-    System.out.println("O pai tem o terceiro filho aos 32 anos");
+    System.out.println("O pai tem o terceiro filho aos " + age + " anos");
 
     increaseAge(58);
-    System.out.println("Pai morre");
+    System.out.println("Pai morre aos " + age + " anos");
 
   }
 
