@@ -1,3 +1,23 @@
+/* 
+ *  @Author : Lucas Pedrosa Larangeira
+ *  Matriculation : 202011430
+ *  Creation : 07/03/2022
+ *  Last alteration: 13/03/2022
+ *  Name: MainController.java
+ *  Function: Control everything that happens in the java GUI.
+ * 
+ *  Music Copyright (c) : UEFA Champions League Official Theme Song
+ *  Composer : Tony Britten. Use is subject to license terms.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
+
+
+
 package controller;
 
 import java.net.URL;
@@ -22,7 +42,7 @@ import util.threads.ThreadSon3;
 
 public class MainController implements Initializable {
 
-  // Images
+  // Images used
   @FXML private ImageView imgFather;
   @FXML private ImageView imgFilho1;
   @FXML private ImageView imgFilho3;
@@ -45,8 +65,7 @@ public class MainController implements Initializable {
 
   private MediaPlayer mediaPlayer;
 
-
-  // Threads:
+  // Father Thread, used to start the other threads
   private ThreadFather threadFather = new ThreadFather();
 
   @Override
@@ -62,12 +81,14 @@ public class MainController implements Initializable {
     });
   }
 
-  // @Override
-  // public void run() {
-  //   threadFather.start();
-  // }
 
-  // Methods
+  /*
+   *  Method name: slashMusicPlays
+   *  it will try to get the music path and run it
+   *  it sometimes doesnt work in some linux versions
+   * 
+   * 
+   */
 
   public void slashMusicPlays(){
     try{
@@ -80,35 +101,41 @@ public class MainController implements Initializable {
     }
   }
 
-  public void killFather(){
+  public void killFather(){ //Method used to change the image referring to father Thread
     imgFather.setImage(new Image("/img/paiIMORTAL.png"));
   }
 
-  public void killSon1(){
+  public void killSon1(){ //Method used to change the image referring to Son1 Thread
     imgFilho1.setImage(new Image("/img/filho1morto.png"));
   }
 
-  public void killSon2(){
+  public void killSon2(){ //Method used to change the image referring to Son2 Thread
     imgFilho2.setImage(new Image("/img/filho2morto.png"));
   }
 
-  public void killSon3(){
+  public void killSon3(){ //Method used to change the image referring to Son3 Thread
     imgFilho3.setImage(new Image("/img/filho3morto.png"));
   }
 
-  public void killGrandson1(){
+  public void killGrandson1(){  //Method used to change the image referring to Grandson1 Thread
     imgNeto1.setImage(new Image("/img/neto1morto.png"));
   }
   
-  public void killGrandson2(){
+  public void killGrandson2(){  //Method used to change the image referring to Grandson2 Thread
     imgNeto2.setImage(new Image("/img/neto2morto.png"));
   }
 
-  public void killGreatGrandson(){
+  public void killGreatGrandson(){  //Method used to change the image referring to GreatGrandson Thread
     imgBisneto.setImage(new Image("/img/bisneto1morto.png"));
   }
 
-  // gets and sets
+  /*
+   *  The next lines are just get and set methods
+   *  these types are self explanatory
+   * 
+   * 
+   */
+
   public void setFatherVisible() {
     imgFather.setVisible(true);
   }

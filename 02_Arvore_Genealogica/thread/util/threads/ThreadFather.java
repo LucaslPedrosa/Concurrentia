@@ -1,3 +1,21 @@
+/* 
+ *  @Author : Lucas Pedrosa Larangeira
+ *  Matriculation : 202011430
+ *  Creation : 07/03/2022
+ *  Last alteration: 13/03/2022
+ *  Name: ThreadFather.java
+ *  Function: ThreadFather simulates the Father having his three 
+ *  childs and then proceed to death
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
+
+
 package util.threads;
 
 import controller.MainController;
@@ -5,8 +23,20 @@ import javafx.application.Platform;
 
 public class ThreadFather extends Thread {
 
+  /* *Father age starting value */
   private int age = 0;
+
+  /* *This Controller should be the same as MainController used by FX */
   private MainController controller;
+
+
+  /*
+   *
+   * run() method is called whenever ThreadFather is started
+   * It will age the father and create his child Threads
+   * 
+   * 
+   */
 
   @Override
   public void run(){
@@ -39,7 +69,12 @@ public class ThreadFather extends Thread {
 
   }
 
-  //Methods
+  /*
+   *  Method name: increaseAge
+   *  it should increase int Age by "much"
+   *  and sleep the same number of times
+   * 
+   */
   public void increaseAge(int much){
     much += age;
     while(age < much){
@@ -56,7 +91,13 @@ public class ThreadFather extends Thread {
 
   }
 
-  // gets and sets
+  /*
+   *  The next lines are just get and set methods
+   *  these types are self explanatory
+   * 
+   * 
+   */
+
   public void setController(MainController controller){
     this.controller = controller;
   }
