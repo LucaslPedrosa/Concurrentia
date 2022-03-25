@@ -1,17 +1,23 @@
 package model;
 
+import java.util.concurrent.Semaphore;
+
 import controller.MainController;
 import javafx.application.Platform;
 import javafx.scene.image.ImageView;
 
 public class TrainThread extends Thread {
 
-  private MainController controller;
+  protected MainController controller;
   private ImageView image;
-  private int speed = 90;
+  private int speed = 10;
   private double posX;
   private double posY;
   private double angle;
+  private final double ORIGINAL_POSX;
+  private final double ORIGINAL_POSY;
+  private final double ORIGINAL_ANGLE;
+  protected boolean looping = true;
 
   public TrainThread(MainController controller, ImageView image) {
     this.controller = controller;
@@ -19,6 +25,9 @@ public class TrainThread extends Thread {
     posX = image.getX();
     posY = image.getY();
     angle = image.getRotate();
+    ORIGINAL_POSX = posX;
+    ORIGINAL_POSY = posY;
+    ORIGINAL_ANGLE = angle;
   }
 
   /*
@@ -42,7 +51,7 @@ public class TrainThread extends Thread {
 
     while (i < 100) {
       i++;
-      try { Thread.sleep((10)); } catch (Exception e) {}
+      try { Thread.sleep((speed)); } catch (Exception e) {}
 
       Platform.runLater(() -> {
         image.setX(image.getX()+x);
@@ -60,8 +69,9 @@ public class TrainThread extends Thread {
 
     while (((sun < 0 && image.getX() > posX+x) || (sun > 0 && image.getX() < posX + x))) {
       try {
-        Thread.sleep((10));
+        Thread.sleep(speed);
       } catch (Exception e) {
+        System.out.println("Erro no moveX: " + e.getStackTrace());
       }
       Platform.runLater(() -> {
         image.setX(image.getX() + sun);
@@ -76,8 +86,9 @@ public class TrainThread extends Thread {
 
     while (((sun < 0 && image.getY() > posY+y) || (sun > 0 && image.getY() < posY + y))) {
       try {
-        Thread.sleep((10));
+        Thread.sleep((speed));
       } catch (Exception e) {
+        System.out.println("Erro no moveY: " + e.getStackTrace());
       }
       Platform.runLater(() -> {
         image.setY(image.getY() + sun);
@@ -90,7 +101,7 @@ public class TrainThread extends Thread {
     double sun = (direction < 0 ? -1 : 1);
     while(((sun < 0 && image.getRotate() > angle+direction) || (sun > 0 && image.getRotate() < angle + direction))){
       try{
-        Thread.sleep(10);
+        Thread.sleep(speed);
       }catch(Exception e){}
       Platform.runLater(() -> {
         image.setRotate((image.getRotate() + sun)%360);
@@ -99,5 +110,21 @@ public class TrainThread extends Thread {
     }
     angle = image.getRotate();
   }
+
+  public void reset(){
+    Platform.runLater(() -> {
+      image.setRotate(ORIGINAL_ANGLE);
+      image.setX(ORIGINAL_POSX);
+      image.setY(ORIGINAL_POSY);
+    });
+    angle = ORIGINAL_ANGLE;
+    posY = ORIGINAL_POSY;
+    posX = ORIGINAL_POSX;
+  }
+
+  public void setSpeed(int speed){
+    this.speed = speed;
+  }
+
 
 }
