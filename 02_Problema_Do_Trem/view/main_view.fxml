@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="1035.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/map.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="t2" fitHeight="70.0" fitWidth="130.0" layoutX="-130.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../img/train2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="t1" fitHeight="70.0" fitWidth="130.0" layoutX="1035.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/train.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="1035.0" prefHeight="464.0" prefWidth="204.0" style="-fx-background-color: WHITE;" />
+   </children>
+</AnchorPane>
