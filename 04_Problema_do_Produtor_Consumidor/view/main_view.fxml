@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <AnchorPane fx:id="anchorPaneManagement" layoutX="361.0" layoutY="150.0" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1726.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/desk/backGround.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="542.0" layoutX="329.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/desk/topText.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgShop" fitHeight="110.0" fitWidth="110.0" layoutX="1076.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/desk/shop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgProduction" fitHeight="110.0" fitWidth="123.0" layoutX="951.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/desk/production.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgConsumer" fitHeight="110.0" fitWidth="110.0" layoutX="824.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/desk/consumers.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneProducers" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="81.0" fitWidth="467.0" layoutX="14.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/desk/moneyText.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="textLabelMoney" alignment="CENTER_RIGHT" layoutX="60.0" layoutY="619.0" prefHeight="62.0" prefWidth="421.0" text="POBRE" textAlignment="RIGHT" textFill="#2aff00">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
