@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <AnchorPane fx:id="anchorPaneManagement" layoutX="361.0" layoutY="150.0" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorPaneManagement" layoutX="361.0" layoutY="150.0" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="700.0" fitWidth="1726.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -44,24 +44,24 @@
                   <Image url="@../img/producers/background.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgRefinery1" fitHeight="150.0" fitWidth="200.0" layoutX="135.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgRefinery1" fitHeight="225.0" fitWidth="490.0" layoutX="105.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/producers/refinery.png" />
+                  <Image url="@../img/producers/oilRefinery.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgRefinery2" fitHeight="150.0" fitWidth="200.0" layoutX="388.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgRefinery2" fitHeight="250.0" fitWidth="235.0" layoutX="365.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/producers/refinery.png" />
+                  <Image url="@../img/producers/oilRefinery.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgRefinery3" fitHeight="150.0" fitWidth="200.0" layoutX="684.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgRefinery3" fitHeight="225.0" fitWidth="235.0" layoutX="677.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/producers/refinery.png" />
+                  <Image url="@../img/producers/oilRefinery.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgRefinery4" fitHeight="150.0" fitWidth="200.0" layoutX="965.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgRefinery4" fitHeight="225.0" fitWidth="305.0" layoutX="957.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/producers/refinery.png" />
+                  <Image url="@../img/producers/oilRefinery.png" />
                </image>
             </ImageView>
             <ImageView fx:id="imgProdToManagment" fitHeight="110.0" fitWidth="110.0" layoutX="1069.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
@@ -70,14 +70,24 @@
                </image>
             </ImageView>
          </children></AnchorPane>
-      <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="807.0" fitWidth="1362.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/consumers/background.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="853.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgConsumerToManagment" fitHeight="110.0" fitWidth="110.0" layoutX="1069.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/managment.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCar1" fitHeight="150.0" fitWidth="200.0" layoutX="714.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/consumers/blueCar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCar2" fitHeight="150.0" fitWidth="200.0" layoutX="853.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/consumers/redCar.png" />
                </image>
@@ -87,9 +97,9 @@
                   <Image url="@../img/consumers/background2.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgConsumerToManagment" fitHeight="110.0" fitWidth="110.0" layoutX="1069.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgCar3" fitHeight="150.0" fitWidth="200.0" layoutX="1000.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/managment.png" />
+                  <Image url="@../img/consumers/blueCar.png" />
                </image>
             </ImageView>
          </children>
@@ -109,7 +119,7 @@
             <Image url="@../img/oil.png" />
          </image>
       </ImageView>
-      <Label fx:id="textLabelMoney1" alignment="CENTER_RIGHT" layoutX="60.0" layoutY="536.0" prefHeight="53.0" prefWidth="143.0" text="0L" textAlignment="RIGHT">
+      <Label fx:id="textLabelOil" alignment="CENTER_RIGHT" layoutX="60.0" layoutY="536.0" prefHeight="53.0" prefWidth="143.0" text="0L" textAlignment="RIGHT">
          <font>
             <Font size="34.0" />
          </font>

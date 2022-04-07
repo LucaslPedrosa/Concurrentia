@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.Buffer;
+import model.OilRefinery;
 
 public class MainController implements Initializable {
 
@@ -51,15 +53,23 @@ public class MainController implements Initializable {
     private Label textLabelMoney;
 
     @FXML
-    private Label textLabelMoney1;
+    private Label textLabelOil;
 
     @FXML
     private AnchorPane anchorPaneConsumers;
 
-
+    OilRefinery refinerys[] = new OilRefinery[4];
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+      refinerys[0] = new OilRefinery(this, imgRefinery1);
+      refinerys[1] = new OilRefinery(this, imgRefinery2);
+      refinerys[2] = new OilRefinery(this, imgRefinery3);
+      refinerys[3] = new OilRefinery(this, imgRefinery4);
+
+      refinerys[0].start();
 
       /**
        * Next methods are used to change screens
@@ -85,9 +95,10 @@ public class MainController implements Initializable {
         anchorPaneManagement.setVisible(true);
       });
 
+    }
 
-
-
+    public void updateOil(){
+      textLabelOil.setText(String.valueOf(Buffer.semaphoreFull.availablePermits()));
     }
 
 }
