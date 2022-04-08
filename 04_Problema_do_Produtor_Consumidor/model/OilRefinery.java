@@ -51,4 +51,8 @@ public class OilRefinery extends Thread {
     }
   }
 
+  public void turnOnOff(){
+    this.online = !(this.online);
+  }
+
 }

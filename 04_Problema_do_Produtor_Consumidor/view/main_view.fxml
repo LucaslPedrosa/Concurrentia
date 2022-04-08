@@ -69,6 +69,26 @@
                   <Image url="@../img/managment.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="202.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="467.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="758.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="1053.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
       <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -77,19 +97,19 @@
                   <Image url="@../img/consumers/background.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgConsumerToManagment" fitHeight="110.0" fitWidth="110.0" layoutX="1069.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/managment.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="imgCar1" fitHeight="150.0" fitWidth="200.0" layoutX="714.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgCar1" fitHeight="150.0" fitWidth="200.0" layoutX="514.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/consumers/blueCar.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgCar2" fitHeight="150.0" fitWidth="200.0" layoutX="853.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgCar2" fitHeight="150.0" fitWidth="200.0" layoutX="653.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/consumers/redCar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCar3" fitHeight="150.0" fitWidth="200.0" layoutX="784.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/consumers/blueCar.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="807.0" fitWidth="1362.0" pickOnBounds="true" preserveRatio="true">
@@ -97,9 +117,24 @@
                   <Image url="@../img/consumers/background2.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgCar3" fitHeight="150.0" fitWidth="200.0" layoutX="1000.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgConsumerToManagment" fitHeight="110.0" fitWidth="110.0" layoutX="1069.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/consumers/blueCar.png" />
+                  <Image url="@../img/managment.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="653.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="791.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="921.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/powerOff.png" />
                </image>
             </ImageView>
          </children>
