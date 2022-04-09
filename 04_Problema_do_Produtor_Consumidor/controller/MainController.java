@@ -15,187 +15,215 @@ import model.OilRefinery;
 
 public class MainController implements Initializable {
   @FXML
-  private AnchorPane anchorPaneManagement;
+    private AnchorPane anchorPaneManagement;
 
-  @FXML
-  private ImageView imgShop;
+    @FXML
+    private ImageView imgShop;
 
-  @FXML
-  private ImageView imgProduction;
+    @FXML
+    private ImageView imgProduction;
 
-  @FXML
-  private ImageView imgConsumer;
+    @FXML
+    private ImageView imgConsumer;
 
-  @FXML
-  private AnchorPane anchorPaneProducers;
+    @FXML
+    private AnchorPane anchorPaneProducers;
 
-  @FXML
-  private ImageView imgRefinery1;
+    @FXML
+    private ImageView imgRefinery1;
 
-  @FXML
-  private ImageView imgRefinery2;
+    @FXML
+    private ImageView imgRefinery2;
 
-  @FXML
-  private ImageView imgRefinery3;
+    @FXML
+    private ImageView imgRefinery3;
 
-  @FXML
-  private ImageView imgRefinery4;
+    @FXML
+    private ImageView imgRefinery4;
 
-  @FXML
-  private ImageView imgProdToManagment;
+    @FXML
+    private ImageView imgProdToManagment;
 
-  @FXML
-  private ImageView imgRefineryTurnOn1;
+    @FXML
+    private ImageView imgRefineryTurnOn1;
 
-  @FXML
-  private ImageView imgRefineryTurnOn2;
+    @FXML
+    private ImageView imgRefineryTurnOn2;
 
-  @FXML
-  private ImageView imgRefineryTurnOn3;
+    @FXML
+    private ImageView imgRefineryTurnOn3;
 
-  @FXML
-  private ImageView imgRefineryTurnOn4;
+    @FXML
+    private ImageView imgRefineryTurnOn4;
 
-  @FXML
-  private ImageView imgLoadingBar1;
+    @FXML
+    private ImageView imgLoadingBar1;
 
-  @FXML
-  private ImageView imgProgressBar11;
+    @FXML
+    private ImageView imgProgressBar11;
 
-  @FXML
-  private ImageView imgProgressBar12;
+    @FXML
+    private ImageView imgProgressBar12;
 
-  @FXML
-  private ImageView imgProgressBar13;
+    @FXML
+    private ImageView imgProgressBar13;
 
-  @FXML
-  private ImageView imgLoadingBar2;
+    @FXML
+    private ImageView imgLoadingBar2;
 
-  @FXML
-  private ImageView imgProgressBar21;
+    @FXML
+    private ImageView imgProgressBar21;
 
-  @FXML
-  private ImageView imgProgressBar22;
+    @FXML
+    private ImageView imgProgressBar22;
 
-  @FXML
-  private ImageView imgProgressBar23;
+    @FXML
+    private ImageView imgProgressBar23;
 
-  @FXML
-  private ImageView imgLoadingBar3;
+    @FXML
+    private ImageView imgLoadingBar3;
 
-  @FXML
-  private ImageView imgProgressBar31;
+    @FXML
+    private ImageView imgProgressBar31;
 
-  @FXML
-  private ImageView imgProgressBar32;
+    @FXML
+    private ImageView imgProgressBar32;
 
-  @FXML
-  private ImageView imgProgressBar33;
+    @FXML
+    private ImageView imgProgressBar33;
 
-  @FXML
-  private ImageView imgLoadingBar4;
+    @FXML
+    private ImageView imgLoadingBar4;
 
-  @FXML
-  private ImageView imgProgressBar41;
+    @FXML
+    private ImageView imgProgressBar41;
 
-  @FXML
-  private ImageView imgProgressBar42;
+    @FXML
+    private ImageView imgProgressBar42;
 
-  @FXML
-  private ImageView imgProgressBar43;
+    @FXML
+    private ImageView imgProgressBar43;
 
-  @FXML
-  private Button buttonSpd11;
+    @FXML
+    private Button buttonSpd11;
 
-  @FXML
-  private Button buttonSpd12;
+    @FXML
+    private Button buttonSpd12;
 
-  @FXML
-  private Button buttonSpd13;
+    @FXML
+    private Button buttonSpd13;
 
-  @FXML
-  private Button buttonSpd21;
+    @FXML
+    private Button buttonSpd21;
 
-  @FXML
-  private Button buttonSpd22;
+    @FXML
+    private Button buttonSpd22;
 
-  @FXML
-  private Button buttonSpd23;
+    @FXML
+    private Button buttonSpd23;
 
-  @FXML
-  private Button buttonSpd31;
+    @FXML
+    private Button buttonSpd31;
 
-  @FXML
-  private Button buttonSpd32;
+    @FXML
+    private Button buttonSpd32;
 
-  @FXML
-  private Button buttonSpd33;
+    @FXML
+    private Button buttonSpd33;
 
-  @FXML
-  private Button buttonSpd41;
+    @FXML
+    private Button buttonSpd41;
 
-  @FXML
-  private Button buttonSpd42;
+    @FXML
+    private Button buttonSpd42;
 
-  @FXML
-  private Button buttonSpd43;
+    @FXML
+    private Button buttonSpd43;
 
-  @FXML
-  private AnchorPane anchorPaneConsumers;
+    @FXML
+    private AnchorPane anchorPaneConsumers;
 
-  @FXML
-  private ImageView imgCar1;
+    @FXML
+    private ImageView imgCar1;
 
-  @FXML
-  private ImageView imgCar2;
+    @FXML
+    private ImageView imgCar2;
 
-  @FXML
-  private ImageView imgCar3;
+    @FXML
+    private ImageView imgCar3;
 
-  @FXML
-  private ImageView imgConsumerToManagment;
+    @FXML
+    private ImageView imgConsumerToManagment;
 
-  @FXML
-  private ImageView imgGasTurnOn1;
+    @FXML
+    private ImageView imgGasTurnOn1;
 
-  @FXML
-  private ImageView imgGasTurnOn2;
+    @FXML
+    private ImageView imgGasTurnOn2;
 
-  @FXML
-  private ImageView imgGasTurnOn3;
+    @FXML
+    private ImageView imgGasTurnOn3;
 
-  @FXML
-  private AnchorPane anchorPaneShop;
+    @FXML
+    private Button buttonGasSpeed11;
 
-  @FXML
-  private ImageView imgShopToManager;
+    @FXML
+    private Button buttonGasSpeed12;
 
-  @FXML
-  private ImageView imgGas;
+    @FXML
+    private Button buttonGasSpeed13;
 
-  @FXML
-  private ImageView imgOil;
+    @FXML
+    private Button buttonGasSpeed21;
 
-  @FXML
-  private ImageView imgWin;
+    @FXML
+    private Button buttonGasSpeed22;
 
-  @FXML
-  private ImageView imgRefinery;
+    @FXML
+    private Button buttonGasSpeed23;
 
-  @FXML
-  private ImageView imgWheel;
+    @FXML
+    private Button buttonGasSpeed31;
 
-  @FXML
-  private ImageView imgShopConfirm;
+    @FXML
+    private Button buttonGasSpeed32;
 
-  @FXML
-  private Label textLabelMoney;
+    @FXML
+    private Button buttonGasSpeed33;
 
-  @FXML
-  private Label textLabelOil;
+    @FXML
+    private AnchorPane anchorPaneShop;
 
-  @FXML
-  private Label labelShopText;
+    @FXML
+    private ImageView imgShopToManager;
+
+    @FXML
+    private Label labelShopText;
+
+    @FXML
+    private ImageView imgGas;
+
+    @FXML
+    private ImageView imgOil;
+
+    @FXML
+    private ImageView imgWin;
+
+    @FXML
+    private ImageView imgRefinery;
+
+    @FXML
+    private ImageView imgWheel;
+
+    @FXML
+    private ImageView imgShopConfirm;
+
+    @FXML
+    private Label textLabelMoney;
+
+    @FXML
+    private Label textLabelOil;
+
 
   private OilRefinery refinerys[] = new OilRefinery[4];
   private GasStation stations[] = new GasStation[3];
@@ -205,6 +233,7 @@ public class MainController implements Initializable {
   private ImageView progressBar[][] = new ImageView[4][3];
   
   private Button refinerySpeeds[][] = new Button[4][3];
+  private Button stationSpeeds[][] = new Button[3][3];
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -361,11 +390,18 @@ public class MainController implements Initializable {
     stations[witch].makeAmericaGreat();
   }
 
-  public void unlockGasSpeed( int speed){
+  public void unlockRefinerySpeed(int witch){
+
+  }
+
+  public void win(){
+
+  }
+
+  public void unlockGasSpeed(int speed){
     stations[0].unlockSpeed(speed);
     stations[1].unlockSpeed(speed);
     stations[2].unlockSpeed(speed);
-    stations[3].unlockSpeed(speed);
   }
 
   public void unlockRefinery(int witch){
@@ -388,6 +424,19 @@ public class MainController implements Initializable {
     refinerySpeeds[3][0] = buttonSpd41;
     refinerySpeeds[3][1] = buttonSpd42;
     refinerySpeeds[3][2] = buttonSpd43;
+
+    stationSpeeds[0][0] = buttonGasSpeed11;
+    stationSpeeds[0][1] = buttonGasSpeed12;
+    stationSpeeds[0][2] = buttonGasSpeed13;
+
+    stationSpeeds[1][0] = buttonGasSpeed21;
+    stationSpeeds[1][1] = buttonGasSpeed22;
+    stationSpeeds[1][2] = buttonGasSpeed23;
+
+    stationSpeeds[2][0] = buttonGasSpeed31;
+    stationSpeeds[2][1] = buttonGasSpeed32;
+    stationSpeeds[2][2] = buttonGasSpeed33;
+
 
   }
 
@@ -415,9 +464,9 @@ public class MainController implements Initializable {
     refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3, imgLoadingBar3, progressBar[2],refinerySpeeds[2]);
     refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4, imgLoadingBar4, progressBar[3],refinerySpeeds[3]);
 
-    stations[0] = new GasStation(this, imgCar1, imgGasTurnOn1);
-    stations[1] = new GasStation(this, imgCar2, imgGasTurnOn2);
-    stations[2] = new GasStation(this, imgCar3, imgGasTurnOn3);
+    stations[0] = new GasStation(this, imgCar1, imgGasTurnOn1,stationSpeeds[0]);
+    stations[1] = new GasStation(this, imgCar2, imgGasTurnOn2,stationSpeeds[1]);
+    stations[2] = new GasStation(this, imgCar3, imgGasTurnOn3,stationSpeeds[2]);
   }
 
   public void startThreads() {

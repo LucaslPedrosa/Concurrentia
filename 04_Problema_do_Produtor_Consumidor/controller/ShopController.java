@@ -57,10 +57,23 @@ public class ShopController {
         controller.unlockGasStation(gasStations);
         break;
       case (1):
-        if(gasSpeed > 2)
+        if (gasSpeed > 1)
           return;
         gasSpeed++;
         controller.unlockGasSpeed(gasSpeed);
+        break;
+      case (2):
+        if (refinerys > 3)
+          return;
+        controller.unlockRefinery(refinerys);
+        break;
+      case(3):
+        if(refinerysSpeed > 2)
+          return;
+        controller.unlockRefinerySpeed(refinerysSpeed);
+        break;
+      case(4):
+        controller.win();
         break;
       default:
         break;
@@ -97,7 +110,7 @@ public class ShopController {
         Platform.runLater(() -> {
           controller.setShopText(text[4][0]);
         });
-      break;
+        break;
       default:
         break;
 

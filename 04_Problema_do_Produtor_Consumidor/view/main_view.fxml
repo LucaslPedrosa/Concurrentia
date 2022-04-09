@@ -38,7 +38,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchorPaneProducers" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorPaneProducers" prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="807.0" fitWidth="1557.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -183,7 +183,7 @@
             <Button fx:id="buttonSpd42" layoutX="1054.0" layoutY="192.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="2" visible="false" />
             <Button fx:id="buttonSpd43" layoutX="1105.0" layoutY="194.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="3" visible="false" />
          </children></AnchorPane>
-      <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="807.0" fitWidth="1362.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -230,6 +230,15 @@
                   <Image url="@../img/powerOff.png" />
                </image>
             </ImageView>
+            <Button fx:id="buttonGasSpeed11" layoutX="598.0" layoutY="82.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="1" />
+            <Button fx:id="buttonGasSpeed12" layoutX="649.0" layoutY="82.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="2" visible="false" />
+            <Button fx:id="buttonGasSpeed13" layoutX="698.0" layoutY="82.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="3" visible="false" />
+            <Button fx:id="buttonGasSpeed21" layoutX="752.0" layoutY="171.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="1" visible="false" />
+            <Button fx:id="buttonGasSpeed22" layoutX="791.0" layoutY="171.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="2" visible="false" />
+            <Button fx:id="buttonGasSpeed23" layoutX="837.0" layoutY="171.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="3" visible="false" />
+            <Button fx:id="buttonGasSpeed31" layoutX="889.0" layoutY="254.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="1" visible="false" />
+            <Button fx:id="buttonGasSpeed32" layoutX="937.0" layoutY="254.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="2" visible="false" />
+            <Button fx:id="buttonGasSpeed33" layoutX="984.0" layoutY="254.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="3" visible="false" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="anchorPaneShop" prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

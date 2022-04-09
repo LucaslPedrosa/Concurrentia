@@ -2,6 +2,7 @@ package model;
 
 import controller.MainController;
 import javafx.application.Platform;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -15,13 +16,16 @@ public class GasStation extends Thread {
   private int pricePerLitter = 10;
   private double ORIGINAL_X;
   private double ORIGINAL_Y;
+  private Button speeds[];
+  private boolean isSpeed[] = new boolean[3];
 
-  public GasStation(MainController controller, ImageView img, ImageView onlineButton) {
+  public GasStation(MainController controller, ImageView img, ImageView onlineButton, Button speeds[]) {
     this.img = img;
     this.controller = controller;
     this.onlineButton = onlineButton;
     this.ORIGINAL_X = img.getLayoutX();
     this.ORIGINAL_Y = img.getLayoutY();
+    this.speeds = speeds;
   }
 
   @Override
@@ -93,16 +97,27 @@ public class GasStation extends Thread {
       if (online)
         this.onlineButton.setImage(new Image("/img/powerOn.png"));
       else
-      this.onlineButton.setImage(new Image("/img/powerOff.png"));
+        this.onlineButton.setImage(new Image("/img/powerOff.png"));
     });
   }
 
   public void makeAmericaGreat() {
-    onlineButton.setVisible(true);
+    Platform.runLater(() -> {
+      onlineButton.setVisible(true);
+      speeds[0].setVisible(true);
+      if (isSpeed[1])
+        speeds[1].setVisible(true);
+      if (isSpeed[2])
+        speeds[2].setVisible(true);
+    });
   }
 
-  public void unlockSpeed(int speed){
-    
+  public void unlockSpeed(int speed) {
+    isSpeed[speed] = true;
+    if (onlineButton.isVisible())
+      Platform.runLater(() -> {
+        speeds[speed].setVisible(true);
+      });
   }
 
 }
