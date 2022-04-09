@@ -2,6 +2,7 @@ package model;
 
 import controller.MainController;
 import javafx.application.Platform;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -14,15 +15,18 @@ public class OilRefinery extends Thread {
   private ImageView onlineButton;
   private ImageView progressBar[];
   private ImageView loadingBar;
+  private Button speeds[];
+  private boolean isSpeed[] = new boolean[3];
 
   public OilRefinery(MainController controller, ImageView img, ImageView onlineButton, ImageView loadingBar,
-      ImageView progressBar[]) {
+      ImageView progressBar[], Button speeds[]) {
 
     this.controller = controller;
     this.img = img;
     this.onlineButton = onlineButton;
     this.loadingBar = loadingBar;
     this.progressBar = progressBar;
+    this.speeds = speeds;
   }
 
   @Override
@@ -79,6 +83,19 @@ public class OilRefinery extends Thread {
     this.img.setVisible(true);
     loadingBar.setVisible(true);
     onlineButton.setVisible(true);
+    speeds[0].setVisible(true);
+
+    if(isSpeed[1])
+      speeds[1].setVisible(true);
+    if(isSpeed[2])
+      speeds[2].setVisible(true);
+  }
+
+  public void unlockSpeed(int speed)
+  {
+    isSpeed[speed] = true;
+    if(img.isVisible())
+      speeds[speed].setVisible(true);
   }
 
   public void collect() {

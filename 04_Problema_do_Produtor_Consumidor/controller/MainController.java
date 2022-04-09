@@ -203,6 +203,8 @@ public class MainController implements Initializable {
   private int money = 0;
 
   private ImageView progressBar[][] = new ImageView[4][3];
+  
+  private Button refinerySpeeds[][] = new Button[4][3];
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
@@ -212,6 +214,7 @@ public class MainController implements Initializable {
     startThreads();
 
     setProgressBar();
+    setButtons();
 
     /**
      * ShopController static class is used so MainController doesnt overload
@@ -300,23 +303,23 @@ public class MainController implements Initializable {
      */
 
     imgGas.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(1);
+      ShopController.changeSelected(0);
     });
 
     imgWheel.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(2);
+      ShopController.changeSelected(1);
     });
 
     imgRefinery.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(3);
+      ShopController.changeSelected(2);
     });
 
     imgOil.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(4);
+      ShopController.changeSelected(3);
     });
 
     imgWin.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(5);
+      ShopController.changeSelected(4);
     });
 
     imgShopConfirm.setOnMouseClicked(Event -> {
@@ -354,6 +357,40 @@ public class MainController implements Initializable {
     labelShopText.setText(text);
   }
 
+  public void unlockGasStation(int witch){
+    stations[witch].makeAmericaGreat();
+  }
+
+  public void unlockGasSpeed( int speed){
+    stations[0].unlockSpeed(speed);
+    stations[1].unlockSpeed(speed);
+    stations[2].unlockSpeed(speed);
+    stations[3].unlockSpeed(speed);
+  }
+
+  public void unlockRefinery(int witch){
+    refinerys[witch].makeAmericaGreat();
+  }
+
+  public void setButtons(){
+    refinerySpeeds[0][0] = buttonSpd11;
+    refinerySpeeds[0][1] = buttonSpd12;
+    refinerySpeeds[0][2] = buttonSpd13;
+
+    refinerySpeeds[1][0] = buttonSpd21;
+    refinerySpeeds[1][1] = buttonSpd22;
+    refinerySpeeds[1][2] = buttonSpd23;
+
+    refinerySpeeds[2][0] = buttonSpd31;
+    refinerySpeeds[2][1] = buttonSpd32;
+    refinerySpeeds[2][2] = buttonSpd33;
+
+    refinerySpeeds[3][0] = buttonSpd41;
+    refinerySpeeds[3][1] = buttonSpd42;
+    refinerySpeeds[3][2] = buttonSpd43;
+
+  }
+
   public void setProgressBar() {
     progressBar[0][0] = imgProgressBar11;
     progressBar[0][1] = imgProgressBar12;
@@ -373,10 +410,10 @@ public class MainController implements Initializable {
   }
 
   public void createThreads() {
-    refinerys[0] = new OilRefinery(this, imgRefinery1, imgRefineryTurnOn1, imgLoadingBar1, progressBar[0]);
-    refinerys[1] = new OilRefinery(this, imgRefinery2, imgRefineryTurnOn2, imgLoadingBar2, progressBar[1]);
-    refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3, imgLoadingBar3, progressBar[2]);
-    refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4, imgLoadingBar4, progressBar[3]);
+    refinerys[0] = new OilRefinery(this, imgRefinery1, imgRefineryTurnOn1, imgLoadingBar1, progressBar[0],refinerySpeeds[0]);
+    refinerys[1] = new OilRefinery(this, imgRefinery2, imgRefineryTurnOn2, imgLoadingBar2, progressBar[1],refinerySpeeds[1]);
+    refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3, imgLoadingBar3, progressBar[2],refinerySpeeds[2]);
+    refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4, imgLoadingBar4, progressBar[3],refinerySpeeds[3]);
 
     stations[0] = new GasStation(this, imgCar1, imgGasTurnOn1);
     stations[1] = new GasStation(this, imgCar2, imgGasTurnOn2);

@@ -29,6 +29,7 @@ public class GasStation extends Thread {
     while (true) {
       while (online) {
         try {
+          img.setVisible(true);
           moveCar();
           consume();
           wait(500);
@@ -73,6 +74,7 @@ public class GasStation extends Thread {
   }
 
   public void reset() {
+    img.setVisible(false);
     img.setLayoutX(ORIGINAL_X);
     img.setLayoutY(ORIGINAL_Y);
   }
@@ -96,8 +98,11 @@ public class GasStation extends Thread {
   }
 
   public void makeAmericaGreat() {
-    this.img.setVisible(true);
     onlineButton.setVisible(true);
+  }
+
+  public void unlockSpeed(int speed){
+    
   }
 
 }
