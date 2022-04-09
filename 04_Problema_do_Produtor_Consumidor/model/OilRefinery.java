@@ -12,11 +12,17 @@ public class OilRefinery extends Thread {
   private MainController controller;
   private ImageView img;
   private ImageView onlineButton;
+  private ImageView progressBar[];
+  private ImageView loadingBar;
 
-  public OilRefinery(MainController controller, ImageView img, ImageView onlineButton) {
+  public OilRefinery(MainController controller, ImageView img, ImageView onlineButton, ImageView loadingBar,
+      ImageView progressBar[]) {
+
     this.controller = controller;
     this.img = img;
     this.onlineButton = onlineButton;
+    this.loadingBar = loadingBar;
+    this.progressBar = progressBar;
   }
 
   @Override
@@ -24,7 +30,9 @@ public class OilRefinery extends Thread {
     while (true) {
       while (online) {
         try {
+          collect();
           produce();
+          reset();
           wait(1000);
         } catch (Exception e) {
           System.out.println("Production error");
@@ -62,13 +70,40 @@ public class OilRefinery extends Thread {
       if (online)
         this.onlineButton.setImage(new Image("/img/powerOn.png"));
       else
-      this.onlineButton.setImage(new Image("/img/powerOff.png"));
+        this.onlineButton.setImage(new Image("/img/powerOff.png"));
 
     });
   }
 
   public void makeAmericaGreat() {
     this.img.setVisible(true);
+    loadingBar.setVisible(true);
+    onlineButton.setVisible(true);
+  }
+
+  public void collect() {
+
+    wait(speed);
+    Platform.runLater(() -> {
+      progressBar[0].setVisible(true);
+    });
+    wait(speed);
+    Platform.runLater(() -> {
+      progressBar[1].setVisible(true);
+    });
+    wait(speed);
+    Platform.runLater(() -> {
+      progressBar[2].setVisible(true);
+    });
+
+  }
+
+  public void reset() {
+    Platform.runLater(() -> {
+      progressBar[0].setVisible(false);
+      progressBar[1].setVisible(false);
+      progressBar[2].setVisible(false);
+    });
   }
 
 }

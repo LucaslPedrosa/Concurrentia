@@ -3,20 +3,18 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import model.Buffer;
 import model.GasStation;
 import model.OilRefinery;
 
 public class MainController implements Initializable {
 
+  
   @FXML
   private AnchorPane anchorPaneManagement;
 
@@ -60,6 +58,54 @@ public class MainController implements Initializable {
   private ImageView imgRefineryTurnOn4;
 
   @FXML
+  private ImageView imgLoadingBar1;
+
+  @FXML
+  private ImageView imgProgressBar11;
+
+  @FXML
+  private ImageView imgProgressBar12;
+
+  @FXML
+  private ImageView imgProgressBar13;
+
+  @FXML
+  private ImageView imgLoadingBar2;
+
+  @FXML
+  private ImageView imgProgressBar21;
+
+  @FXML
+  private ImageView imgProgressBar22;
+
+  @FXML
+  private ImageView imgProgressBar23;
+
+  @FXML
+  private ImageView imgLoadingBar3;
+
+  @FXML
+  private ImageView imgProgressBar31;
+
+  @FXML
+  private ImageView imgProgressBar32;
+
+  @FXML
+  private ImageView imgProgressBar33;
+
+  @FXML
+  private ImageView imgLoadingBar4;
+
+  @FXML
+  private ImageView imgProgressBar41;
+
+  @FXML
+  private ImageView imgProgressBar42;
+
+  @FXML
+  private ImageView imgProgressBar43;
+
+  @FXML
   private AnchorPane anchorPaneConsumers;
 
   @FXML
@@ -89,31 +135,22 @@ public class MainController implements Initializable {
   @FXML
   private Label textLabelOil;
 
-  OilRefinery refinerys[] = new OilRefinery[4];
-  GasStation stations[] = new GasStation[3];
+  private OilRefinery refinerys[] = new OilRefinery[4];
+  private GasStation stations[] = new GasStation[3];
 
   private int money = 0;
+
+  private ImageView progressBar[][] = new ImageView[4][3];
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
 
-    refinerys[0] = new OilRefinery(this, imgRefinery1, imgRefineryTurnOn1);
-    refinerys[1] = new OilRefinery(this, imgRefinery2, imgRefineryTurnOn2);
-    refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3);
-    refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4);
+    createThreads();
 
-    stations[0] = new GasStation(this, imgCar1, imgGasTurnOn1);
-    stations[1] = new GasStation(this, imgCar2, imgGasTurnOn2);
-    stations[2] = new GasStation(this, imgCar3, imgGasTurnOn3);
+    startThreads();
 
-    refinerys[0].start();
-    refinerys[1].start();
-    refinerys[2].start();
-    refinerys[3].start();
+    setProgressBar();
 
-    stations[0].start();
-    stations[1].start();
-    stations[2].start();
 
     /**
      * Next methods are used to change screens
@@ -203,6 +240,46 @@ public class MainController implements Initializable {
 
   public void gasStationTurnOnOff(int witch) {
     stations[witch].turnOnOff();
+  }
+
+  public void setProgressBar(){
+    progressBar[0][0] = imgProgressBar11;
+    progressBar[0][1] = imgProgressBar12;
+    progressBar[0][2] = imgProgressBar13;
+
+    progressBar[1][0] = imgProgressBar21;
+    progressBar[1][1] = imgProgressBar22;
+    progressBar[1][2] = imgProgressBar23;
+
+    progressBar[2][0] = imgProgressBar31;
+    progressBar[2][1] = imgProgressBar32;
+    progressBar[2][2] = imgProgressBar33;
+
+    progressBar[3][0] = imgProgressBar41;
+    progressBar[3][1] = imgProgressBar42;
+    progressBar[3][2] = imgProgressBar43;
+  }
+
+  public void createThreads(){
+    refinerys[0] = new OilRefinery(this, imgRefinery1, imgRefineryTurnOn1, imgLoadingBar1, progressBar[0]);
+    refinerys[1] = new OilRefinery(this, imgRefinery2, imgRefineryTurnOn2, imgLoadingBar2,progressBar[1]);
+    refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3, imgLoadingBar3,progressBar[2]);
+    refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4, imgLoadingBar4,progressBar[3]);
+
+    stations[0] = new GasStation(this, imgCar1, imgGasTurnOn1);
+    stations[1] = new GasStation(this, imgCar2, imgGasTurnOn2);
+    stations[2] = new GasStation(this, imgCar3, imgGasTurnOn3);
+  }
+
+  public void startThreads(){
+    refinerys[0].start();
+    refinerys[1].start();
+    refinerys[2].start();
+    refinerys[3].start();
+
+    stations[0].start();
+    stations[1].start();
+    stations[2].start();
   }
 
 }

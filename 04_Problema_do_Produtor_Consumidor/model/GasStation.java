@@ -26,7 +26,6 @@ public class GasStation extends Thread {
 
   @Override
   public void run() {
-
     while (true) {
       while (online) {
         try {
@@ -38,7 +37,6 @@ public class GasStation extends Thread {
         } catch (Exception e) {
           System.out.println("Consumption error");
         }
-
       }
       wait(3000);
     }
@@ -94,12 +92,12 @@ public class GasStation extends Thread {
         this.onlineButton.setImage(new Image("/img/powerOn.png"));
       else
       this.onlineButton.setImage(new Image("/img/powerOff.png"));
-
     });
   }
 
   public void makeAmericaGreat() {
     this.img.setVisible(true);
+    onlineButton.setVisible(true);
   }
 
 }
