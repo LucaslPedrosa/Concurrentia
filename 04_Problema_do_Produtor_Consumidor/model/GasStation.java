@@ -11,7 +11,7 @@ public class GasStation extends Thread {
   private ImageView img;
   private ImageView onlineButton;
   private MainController controller;
-  private int speed = 100; // Speed of moving car
+  private int speed = 1000; // Speed of moving car
   private boolean online = false;
   private int pricePerLitter = 10;
   private double ORIGINAL_X;
@@ -56,7 +56,7 @@ public class GasStation extends Thread {
         img.setLayoutX(img.getLayoutX() + 2);
         img.setLayoutY(img.getLayoutY() - 1);
       });
-      wait(speed / 10);
+      wait(speed / 100);
     }
   }
 
@@ -118,6 +118,10 @@ public class GasStation extends Thread {
       Platform.runLater(() -> {
         speeds[speed].setVisible(true);
       });
+  }
+
+  public void setSpeed(int speed){
+    this.speed = speed;
   }
 
 }

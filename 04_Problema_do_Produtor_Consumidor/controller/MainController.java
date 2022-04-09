@@ -355,6 +355,90 @@ public class MainController implements Initializable {
       ShopController.confirm();
     });
 
+    buttonGasSpeed11.setOnMouseClicked(Event -> {
+      stations[0].setSpeed(1000);
+    });
+
+    buttonGasSpeed21.setOnMouseClicked(Event -> {
+      stations[1].setSpeed(1000);
+    });
+
+    buttonGasSpeed21.setOnMouseClicked(Event -> {
+      stations[2].setSpeed(1000);
+    });
+
+    buttonGasSpeed12.setOnMouseClicked(Event -> {
+      stations[0].setSpeed(550);
+    });
+
+    buttonGasSpeed22.setOnMouseClicked(Event -> {
+      stations[1].setSpeed(550);
+    });
+
+    buttonGasSpeed32.setOnMouseClicked(Event -> {
+      stations[2].setSpeed(550);
+    });
+
+    buttonGasSpeed13.setOnMouseClicked(Event -> {
+      stations[0].setSpeed(225);
+    });
+
+    buttonGasSpeed23.setOnMouseClicked(Event -> {
+      stations[1].setSpeed(225);
+    });
+
+    buttonGasSpeed33.setOnMouseClicked(Event -> {
+      stations[2].setSpeed(225);
+    });
+
+    buttonSpd11.setOnMouseClicked(Event -> {
+      refinerys[0].setSpeed(1000);
+    });
+
+    buttonSpd21.setOnMouseClicked(Event -> {
+      refinerys[1].setSpeed(1000);
+    });
+
+    buttonSpd31.setOnMouseClicked(Event -> {
+      refinerys[2].setSpeed(1000);
+    });
+
+    buttonSpd41.setOnMouseClicked(Event -> {
+      refinerys[3].setSpeed(1000);
+    });
+
+    buttonSpd12.setOnMouseClicked(Event -> {
+      refinerys[0].setSpeed(550);
+    });
+
+    buttonSpd22.setOnMouseClicked(Event -> {
+      refinerys[1].setSpeed(550);
+    });
+
+    buttonSpd32.setOnMouseClicked(Event -> {
+      refinerys[2].setSpeed(550);
+    });
+
+    buttonSpd42.setOnMouseClicked(Event -> {
+      refinerys[3].setSpeed(550);
+    });
+
+    buttonSpd13.setOnMouseClicked(Event -> {
+      refinerys[0].setSpeed(225);
+    });
+
+    buttonSpd23.setOnMouseClicked(Event -> {
+      refinerys[1].setSpeed(225);
+    });
+
+    buttonSpd33.setOnMouseClicked(Event -> {
+      refinerys[2].setSpeed(225);
+    });
+
+    buttonSpd43.setOnMouseClicked(Event -> {
+      refinerys[3].setSpeed(225);
+    });
+
   }
 
   public void updateOil() {
@@ -390,8 +474,11 @@ public class MainController implements Initializable {
     stations[witch].makeAmericaGreat();
   }
 
-  public void unlockRefinerySpeed(int witch){
-
+  public void unlockRefinerySpeed(int speed){
+    refinerys[0].unlockSpeed(speed);
+    refinerys[1].unlockSpeed(speed);
+    refinerys[2].unlockSpeed(speed);
+    refinerys[3].unlockSpeed(speed);
   }
 
   public void win(){

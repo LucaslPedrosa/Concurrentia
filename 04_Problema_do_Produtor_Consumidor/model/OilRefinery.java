@@ -20,7 +20,6 @@ public class OilRefinery extends Thread {
 
   public OilRefinery(MainController controller, ImageView img, ImageView onlineButton, ImageView loadingBar,
       ImageView progressBar[], Button speeds[]) {
-
     this.controller = controller;
     this.img = img;
     this.onlineButton = onlineButton;
@@ -95,7 +94,9 @@ public class OilRefinery extends Thread {
   {
     isSpeed[speed] = true;
     if(img.isVisible())
-      speeds[speed].setVisible(true);
+      Platform.runLater(() -> {
+        speeds[speed].setVisible(true);
+      });
   }
 
   public void collect() {
@@ -121,6 +122,10 @@ public class OilRefinery extends Thread {
       progressBar[1].setVisible(false);
       progressBar[2].setVisible(false);
     });
+  }
+
+  public void setSpeed(int speed){
+    this.speed = speed;
   }
 
 }
