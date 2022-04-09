@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -13,8 +14,6 @@ import model.GasStation;
 import model.OilRefinery;
 
 public class MainController implements Initializable {
-
-  
   @FXML
   private AnchorPane anchorPaneManagement;
 
@@ -106,6 +105,42 @@ public class MainController implements Initializable {
   private ImageView imgProgressBar43;
 
   @FXML
+  private Button buttonSpd11;
+
+  @FXML
+  private Button buttonSpd12;
+
+  @FXML
+  private Button buttonSpd13;
+
+  @FXML
+  private Button buttonSpd21;
+
+  @FXML
+  private Button buttonSpd22;
+
+  @FXML
+  private Button buttonSpd23;
+
+  @FXML
+  private Button buttonSpd31;
+
+  @FXML
+  private Button buttonSpd32;
+
+  @FXML
+  private Button buttonSpd33;
+
+  @FXML
+  private Button buttonSpd41;
+
+  @FXML
+  private Button buttonSpd42;
+
+  @FXML
+  private Button buttonSpd43;
+
+  @FXML
   private AnchorPane anchorPaneConsumers;
 
   @FXML
@@ -130,10 +165,37 @@ public class MainController implements Initializable {
   private ImageView imgGasTurnOn3;
 
   @FXML
+  private AnchorPane anchorPaneShop;
+
+  @FXML
+  private ImageView imgShopToManager;
+
+  @FXML
+  private ImageView imgGas;
+
+  @FXML
+  private ImageView imgOil;
+
+  @FXML
+  private ImageView imgWin;
+
+  @FXML
+  private ImageView imgRefinery;
+
+  @FXML
+  private ImageView imgWheel;
+
+  @FXML
+  private ImageView imgShopConfirm;
+
+  @FXML
   private Label textLabelMoney;
 
   @FXML
   private Label textLabelOil;
+
+  @FXML
+  private Label labelShopText;
 
   private OilRefinery refinerys[] = new OilRefinery[4];
   private GasStation stations[] = new GasStation[3];
@@ -151,6 +213,12 @@ public class MainController implements Initializable {
 
     setProgressBar();
 
+    /**
+     * ShopController static class is used so MainController doesnt overload
+     * in methods
+     * its the same as making header files in c++ as example
+     */
+    ShopController.setController(this); // set ShopController MainController
 
     /**
      * Next methods are used to change screens
@@ -176,9 +244,18 @@ public class MainController implements Initializable {
       anchorPaneManagement.setVisible(true);
     });
 
+    imgShopToManager.setOnMouseClicked(Event -> {
+      anchorPaneShop.setVisible(false);
+      anchorPaneManagement.setVisible(true);
+    });
+
+    imgShop.setOnMouseClicked(Event -> {
+      anchorPaneManagement.setVisible(false);
+      anchorPaneShop.setVisible(true);
+    });
+
     /**
      * Next methods are used to turn refinerys on/off
-     * 
      * 
      */
 
@@ -215,6 +292,37 @@ public class MainController implements Initializable {
       gasStationTurnOnOff(2);
     });
 
+    /**
+     * Next methods are used to buy on shop
+     * 
+     * 
+     * 
+     */
+
+    imgGas.setOnMouseClicked(Event -> {
+      ShopController.changeSelected(1);
+    });
+
+    imgWheel.setOnMouseClicked(Event -> {
+      ShopController.changeSelected(2);
+    });
+
+    imgRefinery.setOnMouseClicked(Event -> {
+      ShopController.changeSelected(3);
+    });
+
+    imgOil.setOnMouseClicked(Event -> {
+      ShopController.changeSelected(4);
+    });
+
+    imgWin.setOnMouseClicked(Event -> {
+      ShopController.changeSelected(5);
+    });
+
+    imgShopConfirm.setOnMouseClicked(Event -> {
+      ShopController.confirm();
+    });
+
   }
 
   public void updateOil() {
@@ -242,7 +350,11 @@ public class MainController implements Initializable {
     stations[witch].turnOnOff();
   }
 
-  public void setProgressBar(){
+  public void setShopText(String text){
+    labelShopText.setText(text);
+  }
+
+  public void setProgressBar() {
     progressBar[0][0] = imgProgressBar11;
     progressBar[0][1] = imgProgressBar12;
     progressBar[0][2] = imgProgressBar13;
@@ -260,18 +372,18 @@ public class MainController implements Initializable {
     progressBar[3][2] = imgProgressBar43;
   }
 
-  public void createThreads(){
+  public void createThreads() {
     refinerys[0] = new OilRefinery(this, imgRefinery1, imgRefineryTurnOn1, imgLoadingBar1, progressBar[0]);
-    refinerys[1] = new OilRefinery(this, imgRefinery2, imgRefineryTurnOn2, imgLoadingBar2,progressBar[1]);
-    refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3, imgLoadingBar3,progressBar[2]);
-    refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4, imgLoadingBar4,progressBar[3]);
+    refinerys[1] = new OilRefinery(this, imgRefinery2, imgRefineryTurnOn2, imgLoadingBar2, progressBar[1]);
+    refinerys[2] = new OilRefinery(this, imgRefinery3, imgRefineryTurnOn3, imgLoadingBar3, progressBar[2]);
+    refinerys[3] = new OilRefinery(this, imgRefinery4, imgRefineryTurnOn4, imgLoadingBar4, progressBar[3]);
 
     stations[0] = new GasStation(this, imgCar1, imgGasTurnOn1);
     stations[1] = new GasStation(this, imgCar2, imgGasTurnOn2);
     stations[2] = new GasStation(this, imgCar3, imgGasTurnOn3);
   }
 
-  public void startThreads(){
+  public void startThreads() {
     refinerys[0].start();
     refinerys[1].start();
     refinerys[2].start();
