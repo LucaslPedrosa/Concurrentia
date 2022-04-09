@@ -36,6 +36,7 @@
                   <Image url="@../img/desk/consumers.png" />
                </image>
             </ImageView>
+            <Label layoutX="355.0" layoutY="141.0" prefHeight="17.0" prefWidth="296.0" text="Marlos marques edition" textFill="#e77719" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="anchorPaneProducers" prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -183,7 +184,7 @@
             <Button fx:id="buttonSpd42" layoutX="1054.0" layoutY="192.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="2" visible="false" />
             <Button fx:id="buttonSpd43" layoutX="1105.0" layoutY="194.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="3" visible="false" />
          </children></AnchorPane>
-      <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorPaneConsumers" prefHeight="700.0" prefWidth="1200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="807.0" fitWidth="1362.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -315,5 +316,19 @@
             <Font size="34.0" />
          </font>
       </Label>
+      <AnchorPane prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="778.0" fitWidth="1409.0" layoutX="-154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/champions.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="438.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/congrats.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

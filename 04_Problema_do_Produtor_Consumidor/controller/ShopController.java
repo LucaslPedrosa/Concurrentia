@@ -16,6 +16,8 @@ public class ShopController {
 
   private static int win = 0;
 
+  private static int prices[][] = { { 40, 50 }, { 40, 40 }, { 40, 50, 60 }, { 40, 50 },{250} };
+
   private static String text[][] = {
       {
           // VALUES USED BY GAS STATIONS //
@@ -53,28 +55,46 @@ public class ShopController {
       case (0):
         if (gasStations > 1)
           return;
+        if (controller.getMoney() < prices[0][gasStations])
+          return;
+
+        controller.addMoney(-prices[0][gasStations]);
+
         gasStations++;
         controller.unlockGasStation(gasStations);
         break;
       case (1):
         if (gasSpeed > 1)
           return;
+        if (controller.getMoney() < prices[1][gasSpeed])
+          return;
+
+        controller.addMoney(-prices[1][gasSpeed]);
+        
         gasSpeed++;
         controller.unlockGasSpeed(gasSpeed);
         break;
       case (2):
         if (refinerys > 2)
           return;
+        if (controller.getMoney() < prices[2][refinerys])
+          return;
+        controller.addMoney(-prices[2][refinerys]);
         refinerys++;
         controller.unlockRefinery(refinerys);
         break;
-      case(3):
-        if(refinerysSpeed > 1)
+      case (3):
+        if (refinerysSpeed > 1)
           return;
+        if (controller.getMoney() < prices[3][refinerysSpeed])
+          return;
+        controller.addMoney(-prices[3][refinerysSpeed]);
         refinerysSpeed++;
         controller.unlockRefinerySpeed(refinerysSpeed);
         break;
-      case(4):
+      case (4):
+        if (controller.getMoney() < prices[4][0])
+          return;
         controller.win();
         break;
       default:
