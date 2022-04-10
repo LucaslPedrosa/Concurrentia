@@ -45,7 +45,7 @@ public class ShopController {
           "Voce comprou todas as velocidades disponiveis"
       },
       {
-          "Nao ha nada que dinheiro nao compre nesse mundo, nem mesmo a vitoria\nPreco: 250 RS"
+          "Nao ha nada que dinheiro nao compre nesse mundo, nem mesmo a vitoria\n(Isto encerra o jogo)\nPreco: 250 RS"
       }
   };
 

@@ -452,8 +452,15 @@ public class MainController implements Initializable {
   }
 
   public void addMoney(int x) {
+    try{
+    Buffer.mutex.acquire();
     this.money += x;
     updateMoney();
+    Buffer.mutex.release();
+    }catch(Exception e){
+      System.out.println("Add money error");
+    }
+
   }
 
   public int getMoney() {
