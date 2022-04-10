@@ -1,23 +1,38 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 09/04/2022
+ *  last change at : 10/04/2022 16:58
+ *  Name: Principal.java
+ * 
+ *  ShopController class is used to: select an item from the shop, confirm an buy from the shop
+ *  
+ * 
+ *
+ * 
+ */
+
 package controller;
 
 import javafx.application.Platform;
-import javafx.scene.text.Text;
+import model.Buffer;
 
 public class ShopController {
 
-  private static int selected = 0;
-  private static MainController controller;
+  private static int selected = -1;  // index of witch item is selected from the shop
+  private static MainController controller;  // The main controller class
 
-  private static int gasStations = 0;
-  private static int gasSpeed = 0;
+  private static int gasStations = 0; // Unlocked gas stations index
+  private static int gasSpeed = 0;  // Unlocked gas Speed index
 
-  private static int refinerys = 0;
-  private static int refinerysSpeed = 0;
+  private static int refinerys = 0; // Unlocked Oil Refinery index
+  private static int refinerysSpeed = 0;  //Unlocked Refinery speed index
 
-  private static int win = 0;
+  //Prices from every item
+  private static int prices[][] = { { 40, 50 }, { 40, 40 }, { 40, 50, 60 }, { 40, 50 }, { 250 } };
 
-  private static int prices[][] = { { 40, 50 }, { 40, 40 }, { 40, 50, 60 }, { 40, 50 },{250} };
-
+  // Texted displayed on the shop from every item
   private static String text[][] = {
       {
           // VALUES USED BY GAS STATIONS //
@@ -49,62 +64,82 @@ public class ShopController {
       }
   };
 
+
+  /**
+   * confirm method do a action defined by the selected index
+   * 
+   */
   public static void confirm() {
 
-    switch (selected) {
-      case (0):
-        if (gasStations > 1)
-          return;
-        if (controller.getMoney() < prices[0][gasStations])
-          return;
-
-        controller.addMoney(-prices[0][gasStations]);
-
-        gasStations++;
-        controller.unlockGasStation(gasStations);
-        break;
-      case (1):
-        if (gasSpeed > 1)
-          return;
-        if (controller.getMoney() < prices[1][gasSpeed])
-          return;
-
-        controller.addMoney(-prices[1][gasSpeed]);
-        
-        gasSpeed++;
-        controller.unlockGasSpeed(gasSpeed);
-        break;
-      case (2):
-        if (refinerys > 2)
-          return;
-        if (controller.getMoney() < prices[2][refinerys])
-          return;
-        controller.addMoney(-prices[2][refinerys]);
-        refinerys++;
-        controller.unlockRefinery(refinerys);
-        break;
-      case (3):
-        if (refinerysSpeed > 1)
-          return;
-        if (controller.getMoney() < prices[3][refinerysSpeed])
-          return;
-        controller.addMoney(-prices[3][refinerysSpeed]);
-        refinerysSpeed++;
-        controller.unlockRefinerySpeed(refinerysSpeed);
-        break;
-      case (4):
-        if (controller.getMoney() < prices[4][0])
-          return;
-        controller.win();
-        break;
-      default:
-        break;
+    try {
+      switch (selected) {
+        case (0): //Buy more gas station
+          if (gasStations > 1)  // this means all gas stations were buyed
+            return;
+          if (controller.getMoney() < prices[0][gasStations]) // this means you are poor
+            return;
+          Buffer.mutex.acquire(); // Critical region (Gas threads are also using money variable)
+          controller.addMoney(-prices[0][gasStations]); // modify money
+          Buffer.mutex.release(); // Exit critical region
+          gasStations++;  // another gas station to the book
+          controller.unlockGasStation(gasStations); //unlock determined gas station
+          break;  // end of index 1
+        case (1): //Buy more gas speed
+          if (gasSpeed > 1) //this means all gas speed were buyed
+            return;
+          if (controller.getMoney() < prices[1][gasSpeed])  //this means you are poor
+            return;
+          Buffer.mutex.acquire(); // Critical region (Gas threads are also using money variable)
+          controller.addMoney(-prices[1][gasSpeed]);  //
+          Buffer.mutex.release(); // Exit critical region
+          gasSpeed++; // increase index
+          controller.unlockGasSpeed(gasSpeed); //unlock defined index
+          break;
+        case (2): // Buy more refinerys
+          if (refinerys > 2)  // this means all refinerys were buyed
+            return;
+          if (controller.getMoney() < prices[2][refinerys]) // this means you dont have enought money
+            return;
+          Buffer.mutex.acquire(); // Critical region (Gas threads are also using money variable)
+          controller.addMoney(-prices[2][refinerys]);
+          Buffer.mutex.release(); // Exit critical region
+          refinerys++;  // Refinerys index increase 
+          controller.unlockRefinery(refinerys); //Unlock determined index
+          break;
+        case (3): // Buy more refinery speed
+          if (refinerysSpeed > 1)
+            return;
+          if (controller.getMoney() < prices[3][refinerysSpeed])
+            return;
+          Buffer.mutex.acquire(); // Critical region (Gas threads are also using money variable)
+          controller.addMoney(-prices[3][refinerysSpeed]);
+          Buffer.mutex.release(); // Exit critical region
+          refinerysSpeed++;
+          controller.unlockRefinerySpeed(refinerysSpeed);
+          break;
+        case (4): //end game
+          if (controller.getMoney() < prices[4][0])
+            return;
+          controller.win(); // Just win it
+          break;
+        default:
+          break;
+      }
+      controller.setShopText(""); //reset text
+      selected = -1;
+    } catch (Exception e) {
+      System.out.println("Confirm error");
     }
-    controller.setShopText("");
-    selected = -1;
 
   }
 
+
+  /**
+   * 
+   *  changeSelected method defines selected index and sets his text
+   * 
+   * {@param select : defines selected index then switches it to display determined text}
+   */
   public static void changeSelected(int select) {
     selected = select;
     switch (select) {

@@ -1,3 +1,20 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 31/03/2022
+ *  last change at : 10/04/2022 15:24
+ *  Name: Principal.java
+ * 
+ *  MainController class controls everything that happens in FXML that
+ *  includes images, buttons, anchor pane etc...
+ *  it put the threads on a array and start then 
+ *  
+ * 
+ *
+ * 
+ */
+
 package controller;
 
 import java.net.URL;
@@ -15,240 +32,253 @@ import model.OilRefinery;
 
 public class MainController implements Initializable {
   @FXML
-  private AnchorPane anchorPaneManagement;
+  private AnchorPane anchorPaneManagement; // Anchor pane used by management screen
 
   @FXML
-  private ImageView imgShop;
+  private ImageView imgShop; // used to go to shop anchor pane
 
   @FXML
-  private ImageView imgProduction;
+  private ImageView imgProduction; // used to go to production anchor pane
 
   @FXML
-  private ImageView imgConsumer;
+  private ImageView imgConsumer; // used to go to consumer anchor pane
 
   @FXML
-  private AnchorPane anchorPaneProducers;
+  private AnchorPane anchorPaneProducers; // Anchor pane used by producers
 
   @FXML
-  private ImageView imgRefinery1;
+  private ImageView imgRefinery1; // Refinery 1 img
 
   @FXML
-  private ImageView imgRefinery2;
+  private ImageView imgRefinery2; // Refinery 2 img
 
   @FXML
-  private ImageView imgRefinery3;
+  private ImageView imgRefinery3; // Refinery 3 img
 
   @FXML
-  private ImageView imgRefinery4;
+  private ImageView imgRefinery4; // Refinery 4 img
 
   @FXML
-  private ImageView imgProdToManagment;
+  private ImageView imgProdToManagment; // Image used to go from production screen to manager
 
   @FXML
-  private ImageView imgRefineryTurnOn1;
+  private ImageView imgRefineryTurnOn1; // Img used to turn on/off refinery 1
 
   @FXML
-  private ImageView imgRefineryTurnOn2;
+  private ImageView imgRefineryTurnOn2; // Img used to turn on/off refinery 2
 
   @FXML
-  private ImageView imgRefineryTurnOn3;
+  private ImageView imgRefineryTurnOn3; // Img used to turn on/off refinery 3
 
   @FXML
-  private ImageView imgRefineryTurnOn4;
+  private ImageView imgRefineryTurnOn4; // Img used to turn on/off refinery 4
 
   @FXML
-  private ImageView imgLoadingBar1;
+  private ImageView imgLoadingBar1; // Loading bar image from refinery 1
 
   @FXML
-  private ImageView imgProgressBar11;
+  private ImageView imgProgressBar11; // Progress bar time 1 from refinery 1
 
   @FXML
-  private ImageView imgProgressBar12;
+  private ImageView imgProgressBar12; // Progress bar time 2 from refinery 1
 
   @FXML
-  private ImageView imgProgressBar13;
+  private ImageView imgProgressBar13; // Progress bar time 3 from refinery 1
 
   @FXML
-  private ImageView imgLoadingBar2;
+  private ImageView imgLoadingBar2; // Loading bar image from refinery 2
 
   @FXML
-  private ImageView imgProgressBar21;
+  private ImageView imgProgressBar21; // Progress bar time 1 from refinery 2
 
   @FXML
-  private ImageView imgProgressBar22;
+  private ImageView imgProgressBar22; // Progress bar time 2 from refinery 2
 
   @FXML
-  private ImageView imgProgressBar23;
+  private ImageView imgProgressBar23; // Progress bar time 3 from refinery 2
 
   @FXML
-  private ImageView imgLoadingBar3;
+  private ImageView imgLoadingBar3;// Loading bar image from refinery 3
 
   @FXML
-  private ImageView imgProgressBar31;
+  private ImageView imgProgressBar31; // Progress bar time 1 from refinery 3
 
   @FXML
-  private ImageView imgProgressBar32;
+  private ImageView imgProgressBar32; // Progress bar time 2 from refinery 3
 
   @FXML
-  private ImageView imgProgressBar33;
+  private ImageView imgProgressBar33; // Progress bar time 3 from refinery 3
 
   @FXML
-  private ImageView imgLoadingBar4;
+  private ImageView imgLoadingBar4; // Loading bar image from refinery 4
 
   @FXML
-  private ImageView imgProgressBar41;
+  private ImageView imgProgressBar41; // Progress bar time 1 from refinery 4
 
   @FXML
-  private ImageView imgProgressBar42;
+  private ImageView imgProgressBar42; // Progress bar time 2 from refinery 4
 
   @FXML
-  private ImageView imgProgressBar43;
+  private ImageView imgProgressBar43; // Progress bar time 3 from refinery 4
 
   @FXML
-  private Button buttonSpd11;
+  private Button buttonSpd11; // Button used to toggle Speed 1 from refinery 1
 
   @FXML
-  private Button buttonSpd12;
+  private Button buttonSpd12; // Button used to toggle Speed 2 from refinery 1
 
   @FXML
-  private Button buttonSpd13;
+  private Button buttonSpd13; // Button used to toggle Speed 3 from refinery 1
 
   @FXML
-  private Button buttonSpd21;
+  private Button buttonSpd21; // Button used to toggle Speed 1 from refinery 2
 
   @FXML
-  private Button buttonSpd22;
+  private Button buttonSpd22; // Button used to toggle Speed 2 from refinery 2
 
   @FXML
-  private Button buttonSpd23;
+  private Button buttonSpd23; // Button used to toggle Speed 3 from refinery 2
 
   @FXML
-  private Button buttonSpd31;
+  private Button buttonSpd31; // Button used to toggle Speed 1 from refinery 3
 
   @FXML
-  private Button buttonSpd32;
+  private Button buttonSpd32; // Button used to toggle Speed 2 from refinery 3
 
   @FXML
-  private Button buttonSpd33;
+  private Button buttonSpd33; // Button used to toggle Speed 3 from refinery 3
 
   @FXML
-  private Button buttonSpd41;
+  private Button buttonSpd41; // Button used to toggle Speed 1 from refinery 4
 
   @FXML
-  private Button buttonSpd42;
+  private Button buttonSpd42; // Button used to toggle Speed 2 from refinery 4
 
   @FXML
-  private Button buttonSpd43;
+  private Button buttonSpd43; // Button used to toggle Speed 3 from refinery 4
 
   @FXML
-  private AnchorPane anchorPaneConsumers;
+  private AnchorPane anchorPaneConsumers; // Anchor pane used to display consumers
 
   @FXML
-  private ImageView imgCar1;
+  private ImageView imgCar1; // Car image from gas station 1
 
   @FXML
-  private ImageView imgCar2;
+  private ImageView imgCar2; // Car image from gas station 2
 
   @FXML
-  private ImageView imgCar3;
+  private ImageView imgCar3; // Car image from gas station 3
 
   @FXML
-  private ImageView imgConsumerToManagment;
+  private ImageView imgConsumerToManagment; // Image used to go from consumer Anchor pane to Managment Anchor pane
 
   @FXML
-  private ImageView imgGasTurnOn1;
+  private ImageView imgGasTurnOn1; // Image used to turn gas station 1 on/off
 
   @FXML
-  private ImageView imgGasTurnOn2;
+  private ImageView imgGasTurnOn2; // Image used to turn gas station 2 on/off
 
   @FXML
-  private ImageView imgGasTurnOn3;
+  private ImageView imgGasTurnOn3; // Image used to turn gas station 3 on/off
 
   @FXML
-  private Button buttonGasSpeed11;
+  private Button buttonGasSpeed11; // Image used to turn Gas station 1 speed 1
 
   @FXML
-  private Button buttonGasSpeed12;
+  private Button buttonGasSpeed12; // Image used to turn Gas station 1 speed 2
 
   @FXML
-  private Button buttonGasSpeed13;
+  private Button buttonGasSpeed13; // Image used to turn Gas station 1 speed 3
 
   @FXML
-  private Button buttonGasSpeed21;
+  private Button buttonGasSpeed21; // Image used to turn Gas station 2 speed 1
 
   @FXML
-  private Button buttonGasSpeed22;
+  private Button buttonGasSpeed22; // Image used to turn Gas station 2 speed 2
 
   @FXML
-  private Button buttonGasSpeed23;
+  private Button buttonGasSpeed23; // Image used to turn Gas station 2 speed 3
 
   @FXML
-  private Button buttonGasSpeed31;
+  private Button buttonGasSpeed31; // Image used to turn Gas station 3 speed 1
 
   @FXML
-  private Button buttonGasSpeed32;
+  private Button buttonGasSpeed32; // Image used to turn Gas station 3 speed 2
 
   @FXML
-  private Button buttonGasSpeed33;
+  private Button buttonGasSpeed33; // Image used to turn Gas station 3 speed 3
 
   @FXML
-  private AnchorPane anchorPaneShop;
+  private AnchorPane anchorPaneShop; // AnchorPane used to display shop
 
   @FXML
-  private ImageView imgShopToManager;
+  private ImageView imgShopToManager; // Image used to go from shop to Manager Anchorpane
 
   @FXML
-  private Label labelShopText;
+  private Label labelShopText; // Label used to display shop itens text
 
   @FXML
-  private ImageView imgGas;
+  private ImageView imgGas; // image used to buy another refinery
 
   @FXML
-  private ImageView imgOil;
+  private ImageView imgOil; // Image used to buy Refinery speed
 
   @FXML
-  private ImageView imgWin;
+  private ImageView imgWin; // Image used to win the game
 
   @FXML
-  private ImageView imgRefinery;
+  private ImageView imgRefinery; // Image used to buy another refinery
 
   @FXML
-  private ImageView imgWheel;
+  private ImageView imgWheel; // Image used to buy gas speed
 
   @FXML
-  private ImageView imgShopConfirm;
+  private ImageView imgShopConfirm; // Image used to confirm shop selection
 
   @FXML
-  private Label textLabelMoney;
+  private Label textLabelMoney; // Label used to display actual money
 
   @FXML
-  private Label textLabelOil;
+  private Label textLabelOil; // Label used to display actual Oil
 
   @FXML
-  private AnchorPane anchorPaneWin;
+  private AnchorPane anchorPaneWin; // Anchor pane used to display Victory!
 
-  private OilRefinery refinerys[] = new OilRefinery[4];
-  private GasStation stations[] = new GasStation[3];
+  private OilRefinery refinerys[] = new OilRefinery[4]; // Array of Refinerys used to turn they on easily
+  private GasStation stations[] = new GasStation[3]; // Array of Gas Stations used to turn they on easily
 
-  private int money = 0;
+  private int money = 0; // Actual money
 
-  private ImageView progressBar[][] = new ImageView[4][3];
+  private ImageView progressBar[][] = new ImageView[4][3]; // Array of progressBar from refinerys to make they work
+                                                           // easily
 
-  private Button refinerySpeeds[][] = new Button[4][3];
-  private Button stationSpeeds[][] = new Button[3][3];
+  private Button refinerySpeeds[][] = new Button[4][3]; // Array of Refinery Speeds used to turn they on and click on
+                                                        // them easily
+  private Button stationSpeeds[][] = new Button[3][3]; // Array of Station Speeds used to turn they on and click on them
+                                                       // easily
 
+  /**
+   * Method name: initialize
+   * 
+   * This method comes from extends initializable and it should Override previous
+   * initialize,
+   * this method is executed whenever MainController is started and is used to
+   * make everything work
+   * fine in a 'single line'
+   * 
+   */
   @Override
   public void initialize(URL location, ResourceBundle resources) {
 
-    createThreads();
+    createThreads(); // Create all the Threads
 
-    startThreads();
+    startThreads(); // Start all the Threads
 
-    setProgressBar();
-    setButtons();
+    setProgressBar(); // set Progress Bar from refinerys
+    setButtons(); // set speed buttons
 
     /**
-     * ShopController static class is used so MainController doesnt overload
+     * ShopController static class is used so MainController doesn't overload
      * in methods
      * its the same as making header files in c++ as example
      */
@@ -260,32 +290,32 @@ public class MainController implements Initializable {
      */
     imgConsumer.setOnMouseClicked(Event -> {
       anchorPaneManagement.setVisible(false);
-      anchorPaneConsumers.setVisible(true);
+      anchorPaneConsumers.setVisible(true); // Go to Consumer screen
     });
 
     imgProduction.setOnMouseClicked(Event -> {
       anchorPaneManagement.setVisible(false);
-      anchorPaneProducers.setVisible(true);
+      anchorPaneProducers.setVisible(true); // Go to Producer Screen
     });
 
     imgProdToManagment.setOnMouseClicked(Event -> {
       anchorPaneProducers.setVisible(false);
-      anchorPaneManagement.setVisible(true);
+      anchorPaneManagement.setVisible(true); // Go to Management Screen
     });
 
     imgConsumerToManagment.setOnMouseClicked(Event -> {
       anchorPaneConsumers.setVisible(false);
-      anchorPaneManagement.setVisible(true);
+      anchorPaneManagement.setVisible(true); // Go to management Screen
     });
 
     imgShopToManager.setOnMouseClicked(Event -> {
       anchorPaneShop.setVisible(false);
-      anchorPaneManagement.setVisible(true);
+      anchorPaneManagement.setVisible(true); // Go to Management Screen
     });
 
     imgShop.setOnMouseClicked(Event -> {
       anchorPaneManagement.setVisible(false);
-      anchorPaneShop.setVisible(true);
+      anchorPaneShop.setVisible(true); // Go to shop Screen
     });
 
     /**
@@ -294,7 +324,7 @@ public class MainController implements Initializable {
      */
 
     imgRefineryTurnOn1.setOnMouseClicked(event -> {
-      refineryTurnOnOff(0);
+      refineryTurnOnOff(0); // Self explanatory
     });
 
     imgRefineryTurnOn2.setOnMouseClicked(event -> {
@@ -330,32 +360,37 @@ public class MainController implements Initializable {
      * Next methods are used to buy on shop
      * 
      * 
-     * 
      */
 
     imgGas.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(0);
+      ShopController.changeSelected(0); // Select the First item from the shop
     });
 
     imgWheel.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(1);
+      ShopController.changeSelected(1); // Select the Second item from the shop
     });
 
     imgRefinery.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(2);
+      ShopController.changeSelected(2); // Select the Third item from the shop
     });
 
     imgOil.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(3);
+      ShopController.changeSelected(3); // Select the Fourty item from the shop
     });
 
     imgWin.setOnMouseClicked(Event -> {
-      ShopController.changeSelected(4);
+      ShopController.changeSelected(4); // Select the Fifth item from the shop
     });
 
+    // This function will be called whenever Shop Confirm is clicked
     imgShopConfirm.setOnMouseClicked(Event -> {
-      ShopController.confirm();
+      ShopController.confirm(); // confirm the selected item
     });
+
+    /**
+     * Next methods are used to change gas stations cars speed
+     * 
+     */
 
     buttonGasSpeed11.setOnMouseClicked(Event -> {
       stations[0].setSpeed(1000);
@@ -443,46 +478,98 @@ public class MainController implements Initializable {
 
   }
 
+  /**
+   * Method name: updateOil
+   * 
+   * this function updates oil text whenever is called
+   */
   public void updateOil() {
     textLabelOil.setText(String.valueOf(Buffer.liters));
   }
+
+  /**
+   * Method name: updateMoney
+   * 
+   * this function updates money text whenever is called
+   * 
+   */
 
   public void updateMoney() {
     textLabelMoney.setText(String.valueOf(getMoney()));
   }
 
+  /**
+   * Method name: addMoney
+   * 
+   * this method will add an amount of money and then
+   * update the money
+   * 
+   * {
+   * 
+   * @param x : money to be added}
+   */
+
   public void addMoney(int x) {
-    try{
-    Buffer.mutex.acquire();
-    this.money += x;
-    updateMoney();
-    Buffer.mutex.release();
-    }catch(Exception e){
+    try {
+      Buffer.mutex.acquire(); // Critical region enter
+      this.money += x;
+      updateMoney();
+      Buffer.mutex.release(); // Critical region exit
+    } catch (Exception e) {
       System.out.println("Add money error");
     }
 
   }
 
+  // Get money returns value of money
   public int getMoney() {
     return this.money;
   }
 
+  /**
+   * refineryTurnOnOff is used to turn ON or OFF any refinery
+   * 
+   * {
+   * 
+   * @param witch : this is the index of witch refinery from refinerys array
+   *              declarated in line 248 will be turned ON/OFF}
+   */
   public void refineryTurnOnOff(int witch) {
     refinerys[witch].turnOnOff();
   }
+
+  /**
+   * gasStationTurnOnOff is used to turn ON or OFF any gas Station
+   * 
+   * {
+   * 
+   * @param witch : this is the index of witch gas station from stations array
+   *              declarated on
+   *              line 248 will be turned ON/OFF}
+   * 
+   */
 
   public void gasStationTurnOnOff(int witch) {
     stations[witch].turnOnOff();
   }
 
+  // Method used to set shop text
   public void setShopText(String text) {
     labelShopText.setText(text);
   }
 
+  // Method used to unlock determined gas station
   public void unlockGasStation(int witch) {
     stations[witch].makeAmericaGreat();
   }
 
+  /**
+   * unlockRefinerySpeed will make ALL refinerys determined speed avaliable
+   * 
+   * {
+   * 
+   * @param speed : index used to unlock the speed}
+   */
   public void unlockRefinerySpeed(int speed) {
     refinerys[0].unlockSpeed(speed);
     refinerys[1].unlockSpeed(speed);
@@ -490,20 +577,42 @@ public class MainController implements Initializable {
     refinerys[3].unlockSpeed(speed);
   }
 
+  // Win method called to finish the game
   public void win() {
     anchorPaneWin.setVisible(true);
   }
 
+  /**
+   * unlockGasSpeed method unlocks an determined speed for ALL gas stations
+   * 
+   * {
+   * 
+   * @param speed : index of witch speed will be unlocked}
+   */
   public void unlockGasSpeed(int speed) {
     stations[0].unlockSpeed(speed);
     stations[1].unlockSpeed(speed);
     stations[2].unlockSpeed(speed);
   }
 
+  /**
+   * unlockRefinery method receives an index of a determined refinery and then
+   * unlocks it
+   * 
+   * {
+   * 
+   * @param witch : index of witch refinery should be unlocked}
+   */
   public void unlockRefinery(int witch) {
     refinerys[witch].makeAmericaGreat();
   }
 
+  /**
+   * setButtons method is used to put every speed button in a determined array,
+   * used to pass
+   * as param in consumer and producer constructors
+   * 
+   */
   public void setButtons() {
     refinerySpeeds[0][0] = buttonSpd11;
     refinerySpeeds[0][1] = buttonSpd12;
@@ -535,6 +644,13 @@ public class MainController implements Initializable {
 
   }
 
+  /**
+   * SetProgressBar method is used to put images from progress bar in a determined
+   * array used to pass
+   * as params to constructors
+   * 
+   */
+
   public void setProgressBar() {
     progressBar[0][0] = imgProgressBar11;
     progressBar[0][1] = imgProgressBar12;
@@ -553,6 +669,16 @@ public class MainController implements Initializable {
     progressBar[3][2] = imgProgressBar43;
   }
 
+  /**
+   * createThreads method create every thread used in barcelona and then puts then
+   * in a array.
+   * 
+   * the params passed for the refinerys are: Maincontroller , refinery Image,
+   * refinery image button to turn on, loading bar empty,
+   * array of progressBar
+   * 
+   */
+
   public void createThreads() {
     refinerys[0] = new OilRefinery(this, imgRefinery1, imgRefineryTurnOn1, imgLoadingBar1, progressBar[0],
         refinerySpeeds[0]);
@@ -568,6 +694,12 @@ public class MainController implements Initializable {
     stations[2] = new GasStation(this, imgCar3, imgGasTurnOn3, stationSpeeds[2]);
   }
 
+
+  /**
+   * startThreads is used just to make the code more "good looking"
+   * it starts every thread once created previosly
+   * 
+   */
   public void startThreads() {
     refinerys[0].start();
     refinerys[1].start();

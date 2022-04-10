@@ -3,10 +3,10 @@
  * 
  *  Enrollment : 202011430
  *  Created: 31/03/2022
- *  last change at : 
+ *  last change at : 10/04/2022 15:24
  *  Name: Principal.java
  * 
- * 
+ *  
  *  Principal.java class is the main class from the producer/ consumer problem
  *  application, it should be used
  *  to extend the Application method and use it to launch javaFX
