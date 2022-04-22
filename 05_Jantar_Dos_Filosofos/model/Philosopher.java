@@ -10,8 +10,8 @@ public class Philosopher extends Thread {
   private int index;
   private ImageView rightFork;
   private ImageView leftFork;
-  private int eatSpeed = 10000;
-  private int thinkSpeed = 10000;
+  private int eatSpeed = 1000;
+  private int thinkSpeed = 1000;
   private Label message;
 
   public Philosopher(String name, int index, ImageView rightFork, ImageView leftFork, Label message) {
@@ -85,10 +85,13 @@ public class Philosopher extends Thread {
 
   public void setEatSpeed(int speed){
     this.eatSpeed = speed;
+    System.out.println(name + " velocidade comente esta a : " + speed);
+
   }
 
   public void setThinkSpeed(int speed){
     this.thinkSpeed = speed;
+    System.out.println(name + " velocidade pensante esta a : " + speed);
   }
 
   /**

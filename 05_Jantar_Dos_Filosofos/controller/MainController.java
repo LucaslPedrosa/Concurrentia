@@ -88,20 +88,44 @@ public class MainController implements Initializable {
      * 
      */
 
-    sliderSocratezEat.setOnDragDetected(Event -> {
-      philosophers[0].setEatSpeed(Integer.valueOf(Double.toString(sliderSocratezEat.getValue())));
+    sliderSocratezEat.setOnMouseDragged(Event -> {
+      philosophers[0].setEatSpeed((int)sliderSocratezEat.getValue());
     });
 
-    sliderSocratezThink.setOnDragDetected(Event -> {
-      philosophers[0].setThinkSpeed(Integer.valueOf(Double.toString(sliderSocratezThink.getValue())));
+    sliderSocratezThink.setOnMouseDragged(Event -> {
+      philosophers[0].setThinkSpeed((int)sliderSocratezThink.getValue());
     });
 
-    // sliderSocratezThink.setOnDragDetected(Event -> {
-    //   philosophers[0].setThinkSpeed(Integer.valueOf(Double.toString(sliderSocratezThink.getValue())));
-    // });
+    sliderVoltaireEat.setOnMouseDragged(Event -> {
+      philosophers[1].setEatSpeed((int)sliderVoltaireEat.getValue());
+    });
 
-    sliderLaoTzuEat.setOnDragDetected(Event -> {
-      philosophers[3].setEatSpeed(Integer.valueOf(Double.toString(sliderLaoTzuEat.getValue())));
+    SliderVoltaireThink.setOnMouseDragged(Event -> {
+      philosophers[1].setThinkSpeed((int)SliderVoltaireThink.getValue());
+    });
+
+    sliderSunTzuEat.setOnMouseDragged(Event -> {
+      philosophers[2].setEatSpeed((int)sliderSunTzuEat.getValue());
+    });
+
+    sliderSunTzuThink.setOnMouseDragged(Event -> {
+      philosophers[2].setThinkSpeed((int)sliderSunTzuThink.getValue());
+    });
+
+    sliderLaoTzuEat.setOnMouseDragged(Event -> {
+      philosophers[3].setEatSpeed((int)sliderLaoTzuEat.getValue());
+    });
+
+    sliderLaoTzuThink.setOnMouseDragged(Event -> {
+      philosophers[3].setThinkSpeed((int)sliderLaoTzuThink.getValue());
+    });
+
+    sliderConfuciousEat.setOnMouseDragged(Event -> {
+      philosophers[4].setEatSpeed((int)sliderConfuciousEat.getValue());
+    });
+
+    sliderConfuciousThink.setOnMouseDragged(Event -> {
+      philosophers[4].setThinkSpeed((int)sliderConfuciousThink.getValue());
     });
 
   }
@@ -112,7 +136,7 @@ public class MainController implements Initializable {
     philosophers[1] = new Philosopher("Voltaire", 1, imgFork1, imgFork2, labelVoltairePsn);
     philosophers[2] = new Philosopher("Sun'Tzu", 2, imgFork2, imgFork3, labelSunTzuPsn);
     philosophers[3] = new Philosopher("Lao Tzu", 3, imgFork3, imgFork4, labelLaoTzuPsn);
-    philosophers[4] = new Philosopher("Confucious", 4, imgFork4, imgFork1, labelConfuciousPsn);
+    philosophers[4] = new Philosopher("Confucious", 4, imgFork4, imgFork0, labelConfuciousPsn);
 
     for (int i = 0; i < PHILO_SIZE; i++) {
       philosophers[i].start();

@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <ImageView fitHeight="901.0" fitWidth="1275.0" layoutY="-101.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="901.0" fitWidth="1275.0" layoutY="-106.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/background.jpg" />
          </image>
@@ -44,27 +44,27 @@
             <Image url="@../img/voltaire.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgFork4" fitHeight="86.0" fitWidth="85.0" layoutX="505.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFork4" fitHeight="100.0" fitWidth="116.0" layoutX="490.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/fork.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgFork3" fitHeight="86.0" fitWidth="85.0" layoutX="370.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFork3" fitHeight="107.0" fitWidth="100.0" layoutX="366.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/fork.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgFork2" fitHeight="85.0" fitWidth="85.0" layoutX="434.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFork2" fitHeight="111.0" fitWidth="106.0" layoutX="425.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/fork.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgFork0" fitHeight="86.0" fitWidth="85.0" layoutX="669.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFork0" fitHeight="100.0" fitWidth="116.0" layoutX="669.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/fork.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgFork1" fitHeight="86.0" fitWidth="85.0" layoutX="615.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgFork1" fitHeight="103.0" fitWidth="100.0" layoutX="601.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/fork.png" />
          </image>
@@ -143,7 +143,7 @@
             <Image url="@../img/macarrao.png" />
          </image>
       </ImageView>
-      <Slider fx:id="sliderLaoTzuEat" layoutX="119.0" layoutY="172.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderLaoTzuEat" layoutX="119.0" layoutY="172.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="85.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/eat.png" />
@@ -154,8 +154,8 @@
             <Image url="@../img/think.png" />
          </image>
       </ImageView>
-      <Slider fx:id="sliderLaoTzuThink" layoutX="119.0" layoutY="217.0" prefHeight="14.0" prefWidth="116.0" />
-      <Slider fx:id="sliderSunTzuEat" layoutX="86.0" layoutY="459.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderLaoTzuThink" layoutX="119.0" layoutY="217.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
+      <Slider fx:id="sliderSunTzuEat" layoutX="86.0" layoutY="459.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="52.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/eat.png" />
@@ -166,8 +166,8 @@
             <Image url="@../img/think.png" />
          </image>
       </ImageView>
-      <Slider fx:id="sliderSunTzuThink" layoutX="86.0" layoutY="504.0" prefHeight="14.0" prefWidth="116.0" />
-      <Slider fx:id="sliderVoltaireEat" layoutX="339.0" layoutY="570.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderSunTzuThink" layoutX="86.0" layoutY="504.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
+      <Slider fx:id="sliderVoltaireEat" layoutX="339.0" layoutY="570.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="305.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/eat.png" />
@@ -178,8 +178,8 @@
             <Image url="@../img/think.png" />
          </image>
       </ImageView>
-      <Slider fx:id="SliderVoltaireThink" layoutX="339.0" layoutY="615.0" prefHeight="14.0" prefWidth="116.0" />
-      <Slider fx:id="sliderConfuciousEat" layoutX="574.0" layoutY="70.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="SliderVoltaireThink" layoutX="339.0" layoutY="610.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
+      <Slider fx:id="sliderConfuciousEat" layoutX="574.0" layoutY="70.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="540.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/eat.png" />
@@ -190,8 +190,8 @@
             <Image url="@../img/think.png" />
          </image>
       </ImageView>
-      <Slider fx:id="sliderConfuciousThink" layoutX="574.0" layoutY="115.0" prefHeight="14.0" prefWidth="116.0" />
-      <Slider fx:id="sliderSocratezEat" layoutX="957.0" layoutY="473.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderConfuciousThink" layoutX="574.0" layoutY="115.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
+      <Slider fx:id="sliderSocratezEat" layoutX="957.0" layoutY="473.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
       <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="923.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/eat.png" />
@@ -202,6 +202,16 @@
             <Image url="@../img/think.png" />
          </image>
       </ImageView>
-      <Slider fx:id="sliderSocratezThink" layoutX="957.0" layoutY="518.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderSocratezThink" layoutX="957.0" layoutY="518.0" max="10000.0" min="1000.0" prefHeight="14.0" prefWidth="116.0" value="1000.0" />
+      <Label layoutX="853.0" layoutY="604.0" prefHeight="40.0" prefWidth="297.0" text="Pra direita: Pensa/Come mais    " wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="853.0" layoutY="650.0" prefHeight="40.0" prefWidth="326.0" text="Pra esquerda: Pensa/Come menos" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
