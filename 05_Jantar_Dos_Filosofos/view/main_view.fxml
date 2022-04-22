@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <ImageView fitHeight="901.0" fitWidth="1275.0" layoutY="-101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="355.0" fitWidth="407.0" layoutX="384.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/table.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="260.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/laotzu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="704.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/confucious.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="761.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/socrates.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="214.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/suntzu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="463.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/voltaire.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFork4" fitHeight="86.0" fitWidth="85.0" layoutX="505.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fork.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFork3" fitHeight="86.0" fitWidth="85.0" layoutX="370.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fork.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFork2" fitHeight="85.0" fitWidth="85.0" layoutX="434.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fork.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFork0" fitHeight="86.0" fitWidth="85.0" layoutX="669.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fork.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFork1" fitHeight="86.0" fitWidth="85.0" layoutX="615.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fork.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="626.0" layoutY="553.0" prefHeight="32.0" prefWidth="85.0" text="Voltaire">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="labelVoltairePsn" layoutX="626.0" layoutY="585.0" prefHeight="32.0" prefWidth="185.0" text="Pensando">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSocratesPsn" layoutX="924.0" layoutY="421.0" prefHeight="32.0" prefWidth="212.0" text="Pensando">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="924.0" layoutY="386.0" prefHeight="32.0" prefWidth="92.0" text="Socrates">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="871.0" layoutY="81.0" prefHeight="32.0" prefWidth="127.0" text="Confucious">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="97.0" prefHeight="32.0" prefWidth="85.0" text="Lao'Tzu">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="386.0" prefHeight="40.0" prefWidth="100.0" text="Sun'Tzu">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelConfuciousPsn" layoutX="871.0" layoutY="113.0" prefHeight="32.0" prefWidth="212.0" text="Pensando">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLaoTzuPsn" alignment="CENTER_RIGHT" layoutX="27.0" layoutY="129.0" prefHeight="32.0" prefWidth="199.0" text="Pensando">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSunTzuPsn" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="421.0" prefHeight="32.0" prefWidth="185.0" text="Pensando">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="69.0" fitWidth="66.0" layoutX="411.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/macarrao.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="66.0" layoutX="522.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/macarrao.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="73.0" layoutX="664.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/macarrao.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="601.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/macarrao.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="441.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/macarrao.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderLaoTzuEat" layoutX="119.0" layoutY="172.0" prefHeight="14.0" prefWidth="116.0" />
+      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="85.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="28.0" layoutX="85.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/think.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderLaoTzuThink" layoutX="119.0" layoutY="217.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderSunTzuEat" layoutX="86.0" layoutY="459.0" prefHeight="14.0" prefWidth="116.0" />
+      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="52.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="28.0" layoutX="52.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/think.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderSunTzuThink" layoutX="86.0" layoutY="504.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderVoltaireEat" layoutX="339.0" layoutY="570.0" prefHeight="14.0" prefWidth="116.0" />
+      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="305.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="28.0" layoutX="305.0" layoutY="606.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/think.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="SliderVoltaireThink" layoutX="339.0" layoutY="615.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderConfuciousEat" layoutX="574.0" layoutY="70.0" prefHeight="14.0" prefWidth="116.0" />
+      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="540.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="28.0" layoutX="540.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/think.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderConfuciousThink" layoutX="574.0" layoutY="115.0" prefHeight="14.0" prefWidth="116.0" />
+      <Slider fx:id="sliderSocratezEat" layoutX="957.0" layoutY="473.0" prefHeight="14.0" prefWidth="116.0" />
+      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="923.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="28.0" layoutX="923.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/think.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderSocratezThink" layoutX="957.0" layoutY="518.0" prefHeight="14.0" prefWidth="116.0" />
+   </children>
+</AnchorPane>
