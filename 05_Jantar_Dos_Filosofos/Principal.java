@@ -44,6 +44,7 @@ public class Principal extends Application{
 
   @Override
   public void start(Stage primaryStage) throws Exception {
+    try{
     FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/main_view.fxml"));
     
     Parent root = loader.load();
@@ -54,6 +55,9 @@ public class Principal extends Application{
     primaryStage.setScene(scene);
     primaryStage.sizeToScene();
     primaryStage.show();
+    }catch(Exception e){
+      System.out.println("Doidera");
+    }
   }
 
 }
