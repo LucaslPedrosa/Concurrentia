@@ -21,6 +21,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import controller.MainController;
 
@@ -50,11 +51,13 @@ public class Principal extends Application{
     Parent root = loader.load();
     
     Scene scene = new Scene(root);
+    primaryStage.getIcons().add(new Image("img/philosopher.png"));
     primaryStage.setResizable(false);
-    primaryStage.setTitle("Problema do Produtor/consumidor");
+    primaryStage.setTitle("Jantar dos filosofos");
     primaryStage.setScene(scene);
     primaryStage.sizeToScene();
     primaryStage.show();
+
     }catch(Exception e){
       System.out.println("Doidera");
     }
