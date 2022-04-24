@@ -24,6 +24,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import controller.MainController;
+import model.Philosopher;
+import model.Var;
 
 
 public class Principal extends Application{
