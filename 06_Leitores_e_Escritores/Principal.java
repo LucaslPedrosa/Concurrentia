@@ -1,10 +1,10 @@
 /**
  *  @Author : Lucas Pedrosa Larangeira
  * 
- *  Enrollment :
- *  Created:
- *  last change at :
- *  Name: Principal.java
+ *  Enrollment : 202011430
+ *  Created:  05/05/2022
+ *  last change at :  07/05/2022
+ *  Name: Principal.java 
  * 
  *  
  *  Principal.java class is the main class from the producer/ consumer problem
