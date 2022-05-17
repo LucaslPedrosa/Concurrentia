@@ -2,6 +2,7 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -12,6 +13,7 @@ import model.Mage;
 import model.Ninja;
 import model.Paladin;
 import model.Rogue;
+import model.Variables;
 import model.Warrior;
 
 public class MainController implements Initializable {
@@ -39,7 +41,9 @@ public class MainController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
+    Variables.setUpSemaphores();
     createThreads();
+    
   }
 
   public void createThreads(){

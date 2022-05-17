@@ -21,6 +21,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import controller.MainController;
+import model.Archer;
+import model.BaseCharacter;
+import model.Knight;
+import model.Mage;
+import model.Ninja;
+import model.Paladin;
+import model.Rogue;
+import model.Variables;
+import model.Warrior;
 
 
 public class Principal extends Application{
