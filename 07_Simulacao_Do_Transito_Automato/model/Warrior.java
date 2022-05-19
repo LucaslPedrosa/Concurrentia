@@ -1,8 +1,5 @@
 package model;
 
-
-import java.util.concurrent.Semaphore;
-
 import javafx.scene.image.ImageView;
 
 public class Warrior extends BaseCharacter{
@@ -29,7 +26,6 @@ public class Warrior extends BaseCharacter{
         //Semaphore 9 is no more
         Variables.semaphore[9].release();
         moveY(-80);
-
         Variables.semaphore[7].acquire();
         moveY(-20);
         moveX(150);
@@ -49,15 +45,16 @@ public class Warrior extends BaseCharacter{
         Variables.semaphore[4].acquire();
         // We can now enter road 4
         moveX(25);
-        moveY(20);
+        moveY(40);
         Variables.semaphore[8].release();
-        moveY(100);
+        moveY(80);
         Variables.semaphore[4].release();
         // Road 4 is no more
         Variables.semaphore[5].release();
         // Big road 5 is no more
-        moveY(100);
         Variables.semaphore[3].acquire();
+        Variables.semaphore[37].acquire();
+        moveY(40);
         // We can now use road 3
         moveX(175);
         moveY(-120);
@@ -69,19 +66,35 @@ public class Warrior extends BaseCharacter{
         Variables.semaphore[15].acquire();
         moveY(-120);
         Variables.semaphore[1].acquire();
+        Variables.semaphore[27].acquire();
         moveY(-20);
         Variables.semaphore[15].release();
         moveY(-140);
         Variables.semaphore[2].release();
+        Variables.semaphore[27].release();
         moveY(-100);
-        moveX(-350);
+        moveX(-300);
+        Variables.semaphore[18].acquire();
+        moveX(-50);
+        moveY(20);
+        Variables.semaphore[37].release();
         Variables.semaphore[1].release();
-        moveY(120);
-        moveX(-175);
-        moveY(-100);
+        moveY(60);
+        Variables.semaphore[29].acquire();
+        moveY(40);
+        moveX(-25);
+        Variables.semaphore[18].release();
+        moveX(-125);
+        Variables.semaphore[17].acquire();
+        moveX(-25);
+        moveY(-40);
+        Variables.semaphore[29].release();
+        moveY(-60);
         Variables.semaphore[11].acquire();
         moveY(-20);
-        moveX(-320);
+        moveX(-20);
+        Variables.semaphore[17].release();
+        moveX(-300);
         Variables.semaphore[13].acquire();
         moveX(-30);
         moveY(100);

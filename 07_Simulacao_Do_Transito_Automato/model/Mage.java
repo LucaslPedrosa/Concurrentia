@@ -11,10 +11,18 @@ public class Mage extends BaseCharacter{
   @Override
   public void run(){
     while(true){
-      moveY(-600);
-      moveX(350);
-      moveY(600);
-      moveX(-350);
+      try {
+        Variables.semaphore[22].acquire();
+        Variables.semaphore[23].acquire();
+        moveY(40);
+        moveY(120);
+        moveX(40);
+        Variables.semaphore[23].release();
+        
+        moveX(95);
+        
+      } catch (Exception e) {
+      }
     }
   }
   

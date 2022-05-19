@@ -16,17 +16,17 @@
             <Image url="@../img/characters/warrior.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="archerImg" fitHeight="34.0" fitWidth="38.0" layoutX="898.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="archerImg" fitHeight="34.0" fitWidth="34.0" layoutX="420.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/archer.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="knightImg" fitHeight="34.0" fitWidth="38.0" layoutX="25.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="knightImg" fitHeight="34.0" fitWidth="38.0" layoutX="65.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/knight.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="mageImg" fitHeight="34.0" fitWidth="38.0" layoutX="558.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mageImg" fitHeight="34.0" fitWidth="38.0" layoutX="560.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/mage.png" />
          </image>
@@ -36,7 +36,7 @@
             <Image url="@../img/characters/ninja.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="paladinImg" fitHeight="34.0" fitWidth="38.0" layoutX="379.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="paladinImg" fitHeight="34.0" fitWidth="38.0" layoutX="380.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/Paladin.png" />
          </image>
@@ -46,5 +46,15 @@
             <Image url="@../img/characters/rogue.png" />
          </image>
       </ImageView>
+      <AnchorPane layoutX="965.0" layoutY="-3.0" prefHeight="726.0" prefWidth="235.0" style="-fx-background-color: #646464;">
+         <children>
+            <ImageView fitHeight="156.0" fitWidth="235.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/characters/warrior.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
