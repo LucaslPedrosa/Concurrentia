@@ -52,8 +52,9 @@ public class Warrior extends BaseCharacter{
         // Road 4 is no more
         Variables.semaphore[5].release();
         // Big road 5 is no more
-        Variables.semaphore[3].acquire();
+        moveY(80);
         Variables.semaphore[37].acquire();
+        Variables.semaphore[3].acquire();
         moveY(40);
         // We can now use road 3
         moveX(175);

@@ -32,14 +32,12 @@ public class Knight extends BaseCharacter {
         Variables.semaphore[27].acquire();
         moveX(40);
         moveY(80);
-        Variables.semaphore[28].acquire();
         moveY(80);
         Variables.semaphore[27].release();
         moveY(40);
         Variables.semaphore[35].acquire();
         moveY(40);
         moveX(-40);
-        Variables.semaphore[28].release();
         Variables.semaphore[2].release();
         moveX(-95);
         Variables.semaphore[8].acquire();

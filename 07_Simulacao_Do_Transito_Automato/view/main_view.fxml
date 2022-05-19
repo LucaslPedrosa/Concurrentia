@@ -26,7 +26,7 @@
             <Image url="@../img/characters/knight.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="mageImg" fitHeight="34.0" fitWidth="38.0" layoutX="560.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mageImg" fitHeight="34.0" fitWidth="38.0" layoutX="558.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/mage.png" />
          </image>
