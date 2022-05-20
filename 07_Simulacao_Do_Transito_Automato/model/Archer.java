@@ -27,6 +27,7 @@ public class Archer extends BaseCharacter {
         Variables.semaphore[14].acquire();
         Variables.semaphore[16].acquire();
         moveY(-120);
+        Variables.semaphore[41].acquire();
         Variables.semaphore[13].acquire();
         moveY(-40);
         Variables.semaphore[16].release();
@@ -35,11 +36,11 @@ public class Archer extends BaseCharacter {
         Variables.semaphore[14].release();
         moveY(-80);
         moveX(50);
-        Variables.semaphore[13].release();
         moveX(125);
         moveX(125);
         Variables.semaphore[26].acquire();
         moveX(50);
+        Variables.semaphore[13].release();
         Variables.semaphore[11].release();
         moveX(125);
         Variables.semaphore[1].acquire();
@@ -55,6 +56,7 @@ public class Archer extends BaseCharacter {
         Variables.semaphore[21].acquire();
         moveY(40);
         moveX(-50);
+        Variables.semaphore[41].release();
         Variables.semaphore[1].release();
         Variables.semaphore[27].release();
         moveX(-125);

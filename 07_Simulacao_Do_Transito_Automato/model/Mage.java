@@ -16,14 +16,17 @@ public class Mage extends BaseCharacter{
         moveY(-120);
         moveY(-80);
         Variables.semaphore[6].release();
+        Variables.semaphore[38].release();
         moveY(-40);
         Variables.semaphore[37].acquire();
+        Variables.semaphore[17].acquire();
         Variables.semaphore[18].acquire();
         moveY(-120);
         Variables.semaphore[1].acquire();
         moveY(-40);
         moveX(40);
         Variables.semaphore[18].release();
+        Variables.semaphore[17].release();
         moveX(135);
         moveX(125);
 
@@ -54,6 +57,7 @@ public class Mage extends BaseCharacter{
         Variables.semaphore[3].release();
         Variables.semaphore[37].release();
         moveX(-95);
+        Variables.semaphore[38].acquire();
         Variables.semaphore[23].acquire();
         moveX(-40);
         moveY(-120);

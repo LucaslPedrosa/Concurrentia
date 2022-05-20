@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
@@ -11,7 +14,7 @@
             <Image url="@../img/map.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="warriorImg" fitHeight="34.0" fitWidth="38.0" layoutX="198.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="warriorImg" fitHeight="34.0" fitWidth="38.0" layoutX="200.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/warrior.png" />
          </image>
@@ -31,29 +34,66 @@
             <Image url="@../img/characters/mage.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="ninjaImg" fitHeight="34.0" fitWidth="38.0" layoutX="25.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ninjaImg" fitHeight="34.0" fitWidth="38.0" layoutX="65.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/ninja.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="paladinImg" fitHeight="34.0" fitWidth="38.0" layoutX="380.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="paladinImg" fitHeight="34.0" fitWidth="38.0" layoutX="340.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/Paladin.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="rogueImg" fitHeight="34.0" fitWidth="38.0" layoutX="25.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="rogueImg" fitHeight="34.0" fitWidth="38.0" layoutX="65.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/characters/rogue.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="965.0" layoutY="-3.0" prefHeight="726.0" prefWidth="235.0" style="-fx-background-color: #646464;">
          <children>
-            <ImageView fitHeight="156.0" fitWidth="235.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="739.0" fitWidth="288.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/inv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="selectedImg" fitHeight="23.0" fitWidth="21.0" layoutX="11.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/characters/warrior.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="routeImg" fitHeight="163.0" fitWidth="220.0" layoutX="11.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="selectedText" layoutX="37.0" layoutY="246.0" prefHeight="34.0" prefWidth="172.0" text="Warrior" textFill="#b9b9b9" />
+            <Slider fx:id="speedSlider" layoutX="12.0" layoutY="705.0" max="30.0" min="3.0" prefHeight="14.0" prefWidth="214.0" rotate="180.0" value="5.0" />
+            <Label layoutX="68.0" layoutY="373.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="392.0" prefHeight="21.0" prefWidth="56.0" text="50" textFill="#fff400">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="411.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="373.0" prefHeight="21.0" prefWidth="46.0" text="69" textFill="#fff400">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="392.0" prefHeight="21.0" prefWidth="56.0" text="50" textFill="#fff400">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="173.0" layoutY="411.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
