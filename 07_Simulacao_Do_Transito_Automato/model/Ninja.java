@@ -15,6 +15,7 @@ public class Ninja extends BaseCharacter{
     while(true){
       try {
         moveX(175);
+        Variables.semaphore[42].release();
         moveX(95);
         Variables.semaphore[7].acquire();
         Variables.semaphore[44].acquire();
@@ -43,13 +44,18 @@ public class Ninja extends BaseCharacter{
         moveX(-40);
         Variables.semaphore[40].release();
         moveX(-95);
-        Variables.semaphore[39].acquire();
         Variables.semaphore[12].acquire();
         moveX(-40);
         moveX(-175);
-        moveY(-320);
+        moveY(-120);
+        moveY(-80);
+        Variables.semaphore[42].acquire();
+        Variables.semaphore[16].acquire();
+        moveY(-120);
+        Variables.semaphore[39].acquire();
         moveY(-40);
         moveX(40);
+        Variables.semaphore[16].release();
         Variables.semaphore[25].release();
         Variables.semaphore[12].release();
         

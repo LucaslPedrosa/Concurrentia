@@ -55,10 +55,14 @@ public class BaseCharacter extends Thread {
   }
 
   public void changePause(){
-    if(isRunning)
+    if(isRunning){
       acActive();
-    else
+      System.out.println(this.name + " Is now paused");
+    }
+    else{
       relActive();
+      System.out.println(this.name + " Is now running");
+    }
     changeRunning();
   }
 

@@ -15,14 +15,21 @@ public class Variables {
     }
     /**
      * some "cars" are unable to start at a non critical region
-     * so in matter to make the program run, the semaphore of theirs critical regios
-     * start at 0 mutex
+     * so in matter to make the program run, the semaphore of theirs critical
+     * regions start at 0
      * 
      */
-    semaphore[13] = new Semaphore(0);
+
+    // Mage start here:
     semaphore[38] = new Semaphore(0);
-    semaphore[39] = new Semaphore(0);
+
+    // Rogue start here:
     semaphore[41] = new Semaphore(0);
+    semaphore[13] = new Semaphore(0);
+
+    // Ninja start here:
+    semaphore[39] = new Semaphore(0);
+    semaphore[42] = new Semaphore(0);
   }
 
 }
