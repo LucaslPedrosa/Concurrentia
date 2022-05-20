@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
@@ -61,40 +62,46 @@
                   <Image url="@../img/characters/warrior.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="routeImg" fitHeight="163.0" fitWidth="220.0" layoutX="11.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="selectedText" layoutX="37.0" layoutY="246.0" prefHeight="34.0" prefWidth="172.0" text="Warrior" textFill="#b9b9b9" />
+            <ImageView fx:id="routeImg" fitHeight="175.0" fitWidth="161.0" layoutX="9.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/routes/warRoute.png" />
+               </image></ImageView>
+            <Label fx:id="selectedText" layoutX="38.0" layoutY="246.0" prefHeight="34.0" prefWidth="172.0" text="Warrior" textFill="#b9b9b9" />
             <Slider fx:id="speedSlider" layoutX="12.0" layoutY="705.0" max="30.0" min="3.0" prefHeight="14.0" prefWidth="214.0" rotate="180.0" value="5.0" />
-            <Label layoutX="68.0" layoutY="373.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
+            <Label fx:id="attLabel" layoutX="68.0" layoutY="373.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="68.0" layoutY="392.0" prefHeight="21.0" prefWidth="56.0" text="50" textFill="#fff400">
+            <Label fx:id="spdLabel" layoutX="68.0" layoutY="392.0" prefHeight="21.0" prefWidth="56.0" text="50" textFill="#fff400">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="68.0" layoutY="411.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
+            <Label fx:id="vitLabel" layoutX="68.0" layoutY="411.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="373.0" prefHeight="21.0" prefWidth="46.0" text="69" textFill="#fff400">
+            <Label fx:id="defLabel" layoutX="173.0" layoutY="373.0" prefHeight="21.0" prefWidth="46.0" text="69" textFill="#fff400">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="392.0" prefHeight="21.0" prefWidth="56.0" text="50" textFill="#fff400">
+            <Label fx:id="dexLabel" layoutX="173.0" layoutY="392.0" prefHeight="21.0" prefWidth="56.0" text="50" textFill="#fff400">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="411.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
+            <Label fx:id="wisLabel" layoutX="173.0" layoutY="411.0" prefHeight="21.0" prefWidth="46.0" text="75" textFill="#fff400">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
+            <Label fx:id="charText" layoutX="9.0" layoutY="622.0" prefHeight="77.0" prefWidth="214.0" text="A classe mais roubada do jogo, Warrior possui o maior ataque do jogo alem de alta defesa e poder aumentar sua velocidade e destreza" textFill="WHITE" wrapText="true" />
+            <Button fx:id="pauseButton" layoutX="175.0" layoutY="442.0" mnemonicParsing="false" text="Pause" />
          </children>
       </AnchorPane>
+      <Label layoutX="241.0" layoutY="14.0" prefHeight="34.0" prefWidth="505.0" text="Para mudar a velocidade de uma classe, clique na imagem em movimento dela" />
    </children>
 </AnchorPane>
