@@ -61,6 +61,7 @@ public class Paladin extends BaseCharacter {
         moveY(40);
         Variables.semaphore[31].release();
         moveY(40);
+        Variables.semaphore[45].acquire();
         Variables.semaphore[21].acquire();
         moveY(40);
         moveX(135);
@@ -73,6 +74,7 @@ public class Paladin extends BaseCharacter {
         moveY(40);
         moveX(-40);
         Variables.semaphore[15].release();
+        Variables.semaphore[45].release();
         moveX(-95);
         Variables.semaphore[4].acquire();
         moveX(-40);

@@ -69,6 +69,7 @@ public class Warrior extends BaseCharacter{
         Variables.semaphore[3].release();
         //Semaphore 3 is no more
         moveY(-40);
+        Variables.semaphore[45].acquire();
         Variables.semaphore[2].acquire();
         Variables.semaphore[15].acquire();
         moveY(-40);
@@ -89,6 +90,7 @@ public class Warrior extends BaseCharacter{
         moveY(20);
         Variables.semaphore[37].release();
         Variables.semaphore[1].release();
+        Variables.semaphore[45].release();
         moveY(60);
         Variables.semaphore[29].acquire();
         moveY(40);

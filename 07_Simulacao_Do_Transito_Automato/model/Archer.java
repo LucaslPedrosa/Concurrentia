@@ -43,6 +43,7 @@ public class Archer extends BaseCharacter {
         Variables.semaphore[13].release();
         Variables.semaphore[11].release();
         moveX(125);
+        Variables.semaphore[45].acquire();
         Variables.semaphore[1].acquire();
         moveX(50);
         moveX(50);
@@ -62,6 +63,7 @@ public class Archer extends BaseCharacter {
         moveX(-125);
         moveX(-50);
         Variables.semaphore[21].release();
+        Variables.semaphore[45].release();
         moveX(-75);
         Variables.semaphore[5].acquire();
         Variables.semaphore[6].acquire();

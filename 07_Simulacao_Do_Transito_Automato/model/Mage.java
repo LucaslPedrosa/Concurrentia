@@ -42,10 +42,12 @@ public class Mage extends BaseCharacter{
         moveY(40);
         Variables.semaphore[36].release();
         moveY(80);
+        Variables.semaphore[15].acquire();
         moveY(40);
         Variables.semaphore[27].release();
         Variables.semaphore[1].release();
         moveY(120);
+        Variables.semaphore[15].release();
         Variables.semaphore[2].release();
         moveY(40);
         Variables.semaphore[22].acquire();

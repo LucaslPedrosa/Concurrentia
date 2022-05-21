@@ -30,6 +30,14 @@ public class Variables {
     // Ninja start here:
     semaphore[39] = new Semaphore(0);
     semaphore[42] = new Semaphore(0);
+
+    /**
+     * Some regions can be acessed by two 'cars' but it may occur a deadlock if
+     * more cars enter it
+     * 
+     */
+
+     semaphore[45] = new Semaphore(2);
   }
 
 }
