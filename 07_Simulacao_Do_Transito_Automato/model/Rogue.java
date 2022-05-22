@@ -1,3 +1,18 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: Rogue.java 
+ *  
+ * 
+ *  
+ *  Rogue thread is the thread used for simulating Rogue 'car' actions
+ * 
+ *
+ */
+
 package model;
 
 import javafx.scene.image.ImageView;

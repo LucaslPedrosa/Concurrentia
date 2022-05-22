@@ -1,11 +1,33 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: Variables.java 
+ *  
+ * 
+ *  
+ * 
+ * 
+ * 
+ *
+ */
+
 package model;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ * Variables class is the class used for creating every single semaphore used in
+ * this program
+ * 
+ * 
+ */
 public class Variables {
 
-  private static final int TOTAL_SEMAPHORES = 50; // We create semaphores with one more than necessary because im not
-                                                  // very into doing little subtractions while coding
+  private static final int TOTAL_SEMAPHORES = 50; // We create semaphores with more than necessary because I don't
+                                                  // really like to do small subtractions while coding.
 
   public static Semaphore semaphore[] = new Semaphore[TOTAL_SEMAPHORES];
 
@@ -36,8 +58,8 @@ public class Variables {
      * more cars enter it
      * 
      */
-
-     semaphore[45] = new Semaphore(2);
+    // Paladin X Archer X Warrior deadlock
+    semaphore[45] = new Semaphore(2);
   }
 
 }

@@ -1,3 +1,20 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: MainController.java 
+ *  
+ * 
+ *  
+ *  Main Controller is the principal class that take care of creating
+ *  any threads and changing everything on the FXML
+ * 
+ * 
+ *
+ */
+
 package controller;
 
 import java.net.URL;
@@ -23,89 +40,111 @@ import model.Warrior;
 public class MainController implements Initializable {
 
   @FXML
-  private ImageView warriorImg;
+  private ImageView warriorImg; // image of warrior 'car'
 
   @FXML
-  private ImageView archerImg;
+  private ImageView archerImg; // img of archer 'car'
 
   @FXML
-  private ImageView knightImg;
+  private ImageView knightImg; // img of knight 'car'
 
   @FXML
-  private ImageView mageImg;
+  private ImageView mageImg; // img of mage 'car'
 
   @FXML
-  private ImageView ninjaImg;
+  private ImageView ninjaImg; // img of ninja 'car'
 
   @FXML
-  private ImageView paladinImg;
+  private ImageView paladinImg; // img of paladin 'car'
 
   @FXML
-  private ImageView rogueImg;
+  private ImageView rogueImg; // img of rogue 'car'
 
   @FXML
-  private ImageView selectedImg;
+  private ImageView selectedImg; // img actual selected 'car', appears on the right of the screen
 
   @FXML
-  private ImageView routeImg;
+  private ImageView routeImg; // img of actual selected 'car' route, appears on the right of the screen
 
   @FXML
-  private Label selectedText;
+  private Label selectedText; // the name of the selected 'car', appears on the right of the screen
 
   @FXML
-  private Slider speedSlider;
+  private Slider speedSlider; // slider used to change speed of every car, apperas on the right of the screen
 
   @FXML
-  private Label attLabel;
+  private Label attLabel; // attack status of selected class
 
   @FXML
-  private Label spdLabel;
+  private Label spdLabel; // speed status of selected class
 
   @FXML
-  private Label vitLabel;
+  private Label vitLabel; // vitality status of selected class
 
   @FXML
-  private Label defLabel;
+  private Label defLabel; // defense status of selected class
 
   @FXML
-  private Label dexLabel;
+  private Label dexLabel; // dexterity status of selected class
 
   @FXML
-  private Label wisLabel;
+  private Label wisLabel; // wisdom status of selected class
 
   @FXML
-  private Label charText;
+  private Label charText; // the character description of selected class
 
   @FXML
-  private Button pauseButton;
+  private Button pauseButton; // button to pause determined 'car' moving, it may cause performance issues if
+                              // your machine isn't good enough
 
-  private int classSelected = 1;
+  private int classSelected = 1; // this integer is used to slider know witch class he is working on,
+                                 // 1 = warrior, 2 = archer, 3 = knight
+                                 // 4 = mage, 5 = ninja, 6 = rogue, 7 = paladin
 
+  /**
+   * Called to initialize a controller after its root element has been
+   * completely processed.
+   *
+   * @param location
+   *                  The location used to resolve relative paths for the root
+   *                  object, or
+   *                  <tt>null</tt> if the location is not known.
+   *
+   * @param resources
+   *                  The resources used to localize the root object, or
+   *                  <tt>null</tt> if
+   *                  the root object was not localized.
+   */
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    Variables.setUpSemaphores();
 
-    Warrior warrior = new Warrior("Warrior", warriorImg);
-    warrior.start();
+    Variables.setUpSemaphores(); // create all semaphores needed
 
-    Archer archer = new Archer("Archer", archerImg);
-    archer.start();
+    Warrior warrior = new Warrior("Warrior", warriorImg); // create warrior class
+    warrior.start(); // warrior start
 
-    Knight knight = new Knight("Knight", knightImg);
-    knight.start();
+    Archer archer = new Archer("Archer", archerImg); // create archer class
+    archer.start(); // archer start
 
-    Rogue rogue = new Rogue("Rogue", rogueImg);
-    rogue.start();
+    Knight knight = new Knight("Knight", knightImg); // create knight class
+    knight.start(); // knight start
 
-    Mage mage = new Mage("Mage", mageImg);
-    mage.start();
+    Rogue rogue = new Rogue("Rogue", rogueImg); // create rogue class
+    rogue.start(); // rogue start
 
-    Ninja ninja = new Ninja("Ninja", ninjaImg);
-    ninja.start();
+    Mage mage = new Mage("Mage", mageImg); // create mage class
+    mage.start(); // mage start
 
-    Paladin paladin = new Paladin("Paladin", paladinImg);
-    paladin.start();
+    Ninja ninja = new Ninja("Ninja", ninjaImg); // create ninja class
+    ninja.start(); // ninja start
 
+    Paladin paladin = new Paladin("Paladin", paladinImg); // create paladin class
+    paladin.start(); // paladin start
+
+    /**
+     * method setOnMouseDragged defines a function to be called when a mouse button
+     * has been clicked (pressed and released) on this {@code Node}.
+     */
     speedSlider.setOnMouseDragged(event -> {
       switch (classSelected) {
         case (1):
@@ -141,39 +180,53 @@ public class MainController implements Initializable {
       }
     });
 
+    /**
+     * the button's action is invoked whenever the button is fired. This may be by
+     * the user clicking the button or by an event or other reasons
+     * 
+     */
+
     pauseButton.setOnAction(event -> {
       switch (classSelected) {
         case (1):
-          warrior.changePause();
+          warrior.changePause(); // disable warrior movement
           break;
         case (2):
-          archer.changePause();
+          archer.changePause(); // disable archer movement
           break;
         case (3):
-          knight.changePause();
+          knight.changePause(); // disable knight movement
           break;
         case (4):
-          mage.changePause();
+          mage.changePause(); // disable mage movement
           break;
         case (5):
-          ninja.changePause();
+          ninja.changePause(); // disable ninja movement
           break;
         case (6):
-          rogue.changePause();
+          rogue.changePause(); // disable rogue movement
           break;
         case (7):
-          paladin.changePause();
+          paladin.changePause(); // disable paladin movement
           break;
 
       }
     });
 
+    /**
+     * WarriorImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
+
     warriorImg.setOnMouseClicked(event -> {
-      selectedImg.setImage(new Image("/img/characters/warrior.png"));
-      selectedText.setText("Warrior");
+      selectedImg.setImage(new Image("/img/characters/warrior.png")); // set selected img
+      selectedText.setText("Warrior"); // set name
       classSelected = 1;
       charText.setText(
           "A classe mais forte do jogo, Warrior possui o maior ataque do jogo alem de alta defesa e poder 'buffar' sua velocidade e destreza");
+      // set status
       attLabel.setText("75");
       defLabel.setText("69");
       spdLabel.setText("50");
@@ -181,7 +234,15 @@ public class MainController implements Initializable {
       vitLabel.setText("75");
       wisLabel.setText("50");
       routeImg.setImage(new Image("/img/routes/warRoute.png"));
+      speedSlider.setValue(warrior.getSpeed());
     });
+
+    /**
+     * archerImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
 
     archerImg.setOnMouseClicked(event -> {
       selectedImg.setImage(new Image("/img/characters/archer.png"));
@@ -196,7 +257,15 @@ public class MainController implements Initializable {
       vitLabel.setText("50");
       wisLabel.setText("50");
       routeImg.setImage(new Image("/img/routes/archerRoute.png"));
+      speedSlider.setValue(archer.getSpeed());
     });
+
+    /**
+     * knightImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
 
     knightImg.setOnMouseClicked(event -> {
       selectedImg.setImage(new Image("/img/characters/knight.png"));
@@ -210,8 +279,16 @@ public class MainController implements Initializable {
       dexLabel.setText("50");
       vitLabel.setText("75");
       wisLabel.setText("50");
+      speedSlider.setValue(knight.getSpeed());
       routeImg.setImage(new Image("/img/routes/knightRoute.png"));
     });
+
+    /**
+     * mageImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
 
     mageImg.setOnMouseClicked(event -> {
       selectedImg.setImage(new Image("/img/characters/mage.png"));
@@ -225,8 +302,16 @@ public class MainController implements Initializable {
       dexLabel.setText("75");
       vitLabel.setText("50");
       wisLabel.setText("75");
+      speedSlider.setValue(mage.getSpeed());
       routeImg.setImage(new Image("/img/routes/mageRoute.png"));
     });
+
+    /**
+     * ninjaImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
 
     ninjaImg.setOnMouseClicked(event -> {
       selectedImg.setImage(new Image("/img/characters/ninja.png"));
@@ -240,9 +325,16 @@ public class MainController implements Initializable {
       dexLabel.setText("75");
       vitLabel.setText("50");
       wisLabel.setText("50");
+      speedSlider.setValue(ninja.getSpeed());
       routeImg.setImage(new Image("/img/routes/ninjaRoute.png"));
     });
 
+    /**
+     * rogueImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
     rogueImg.setOnMouseClicked(event -> {
       selectedImg.setImage(new Image("/img/characters/rogue.png"));
       selectedText.setText("Rogue");
@@ -255,9 +347,16 @@ public class MainController implements Initializable {
       dexLabel.setText("75");
       vitLabel.setText("50");
       wisLabel.setText("60");
+      speedSlider.setValue(rogue.getSpeed());
       routeImg.setImage(new Image("/img/routes/rogueRoute.png"));
     });
 
+    /**
+     * paladinImg.setOnMouseClicked defines a action to occur whenever a event
+     * happens, in tis case the mouse clicked event
+     * 
+     * 
+     */
     paladinImg.setOnMouseClicked(event -> {
       selectedImg.setImage(new Image("/img/characters/paladin.png"));
       selectedText.setText("Paladin");
@@ -270,6 +369,7 @@ public class MainController implements Initializable {
       dexLabel.setText("45");
       vitLabel.setText("50");
       wisLabel.setText("75");
+      speedSlider.setValue(paladin.getSpeed());
       routeImg.setImage(new Image("/img/routes/paladinRoute.png"));
     });
 

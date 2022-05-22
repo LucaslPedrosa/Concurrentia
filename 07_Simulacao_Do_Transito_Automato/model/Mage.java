@@ -1,16 +1,31 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: Mage.java 
+ *  
+ * 
+ *  
+ *  Mage thread is the thread used for simulating Mage 'car' actions
+ * 
+ *
+ */
+
 package model;
 
 import javafx.scene.image.ImageView;
 
-public class Mage extends BaseCharacter{
+public class Mage extends BaseCharacter {
 
   public Mage(String name, ImageView img) {
     super(name, img);
   }
 
   @Override
-  public void run(){
-    while(true){
+  public void run() {
+    while (true) {
       try {
         Variables.semaphore[6].acquire();
         moveY(-120);
@@ -30,9 +45,9 @@ public class Mage extends BaseCharacter{
         moveX(135);
         moveX(125);
 
-        //  fun fact: the mage gets here BY THE EXACTLY SAME TIME
-        //  the "warrior" gets at semaphore 6 if no speed has changed
-        
+        // fun fact: the mage gets here BY THE EXACTLY SAME TIME
+        // the "warrior" gets at semaphore 6 if no speed has changed
+
         Variables.semaphore[36].acquire();
         moveX(50);
         moveY(80);
@@ -71,5 +86,5 @@ public class Mage extends BaseCharacter{
       }
     }
   }
-  
+
 }

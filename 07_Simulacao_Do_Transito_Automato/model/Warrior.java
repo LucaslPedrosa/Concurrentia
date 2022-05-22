@@ -1,34 +1,50 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: Warrior.java 
+ *  
+ * 
+ *  
+ *  Warrior thread is the thread used for simulating Warrior 'car' actions
+ * 
+ *
+ */
+
 package model;
 
 import javafx.scene.image.ImageView;
 
-public class Warrior extends BaseCharacter{
+public class Warrior extends BaseCharacter {
 
   public Warrior(String name, ImageView img) {
     super(name, img);
   }
 
   @Override
-  public void run(){
-    while(true){
+  public void run() {
+    while (true) {
       try {
         moveY(-40);
         // Critical Region: Semaphore 10
         Variables.semaphore[10].acquire();
         moveY(-40);
         moveY(-80);
-        //Critical Region: Semaphore 9
+        // Critical Region: Semaphore 9
         Variables.semaphore[9].acquire();
         moveY(-40);
         moveX(40);
-        //We no longer need to wait on road 10, this means semaphore 10 is no more
+        // We no longer need to wait on road 10, this means semaphore 10 is no more
         Variables.semaphore[10].release();
         moveX(135);
         moveY(-40);
-        //Semaphore 9 is no more
+        // Semaphore 9 is no more
         Variables.semaphore[9].release();
         moveY(-40);
-        Variables.semaphore[7].acquire(); 
+        // its needed semaphore 7 and 44
+        Variables.semaphore[7].acquire();
         Variables.semaphore[44].acquire();
         moveY(-40);
         moveX(135);
@@ -67,7 +83,7 @@ public class Warrior extends BaseCharacter{
         moveY(-120);
         moveY(-40);
         Variables.semaphore[3].release();
-        //Semaphore 3 is no more
+        // Semaphore 3 is no more
         moveY(-40);
         Variables.semaphore[45].acquire();
         Variables.semaphore[2].acquire();
@@ -130,18 +146,11 @@ public class Warrior extends BaseCharacter{
         Variables.semaphore[12].release();
         Variables.semaphore[11].release();
 
-
       } catch (Exception e) {
 
       }
 
-
-
-
-      
     }
   }
-  
 
-  
 }

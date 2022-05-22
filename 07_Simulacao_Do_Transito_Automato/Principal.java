@@ -39,9 +39,8 @@ public class Principal extends Application{
   }
 
   /*  The principal class will handle the lauch of the javaFX
-   *  application and the static Music.
-   *  For the interface we extended the Application abstract class
-   *  and the music used some static methods in Music class
+   *  application.
+   *  For the interface it extends the Application abstract class
    * 
    *  The Application will: 
    *  Construct a instance of Application class
@@ -57,7 +56,7 @@ public class Principal extends Application{
     Parent root = loader.load();
     Scene scene = new Scene(root);
 
-    //primaryStage.getIcons().add(new Image("img/icon.png"));
+    primaryStage.getIcons().add(new Image("img/icon.png"));
     primaryStage.setResizable(false);
     primaryStage.setTitle("Simulacao de transito automato");
     primaryStage.setScene(scene);

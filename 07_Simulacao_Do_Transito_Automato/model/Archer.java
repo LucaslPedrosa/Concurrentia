@@ -1,3 +1,18 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: Archer.java 
+ *  
+ * 
+ *  
+ *  Archer thread is the thread used for simulating archer 'car' actions
+ * 
+ *
+ */
+
 package model;
 
 import javafx.scene.image.ImageView;
@@ -92,7 +107,7 @@ public class Archer extends BaseCharacter {
         moveX(-175);
         moveX(-50);
         Variables.semaphore[3].release();
-        moveX(-75);  
+        moveX(-75);
         Variables.semaphore[23].acquire();
         moveX(-50);
         moveY(-120);
@@ -100,18 +115,6 @@ public class Archer extends BaseCharacter {
         Variables.semaphore[23].release();
         Variables.semaphore[22].release();
         moveX(-85);
-
-        
-
-
-        
-
-
-
-
-
-
-
 
       } catch (Exception e) {
 

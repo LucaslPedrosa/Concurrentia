@@ -1,6 +1,21 @@
+/**
+ *  @Author : Lucas Pedrosa Larangeira
+ * 
+ *  Enrollment : 202011430
+ *  Created: 19/05/2022
+ *  last change at : 05/22/2022
+ *  Name: Ninja.java 
+ *  
+ * 
+ *  
+ *  Ninja thread is the thread used for simulating Ninja 'car' actions
+ * 
+ *
+ */
+
+
 package model;
 
-import java.util.concurrent.Semaphore;
 
 import javafx.scene.image.ImageView;
 
