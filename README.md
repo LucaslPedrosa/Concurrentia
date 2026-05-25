@@ -6,6 +6,21 @@ The challenges in this project include:
 
 "01_A-game-of-NIM-main": An implementation of the game of Nim it doesn't necessarily use threads, it's here just for the graphic part.
 
+main menu:
+<img width="1079" height="636" alt="image" src="https://github.com/user-attachments/assets/53730eeb-075c-460a-b588-5a5635212e43" />
+
+how to play:
+<img width="1092" height="635" alt="image" src="https://github.com/user-attachments/assets/c5fc1c79-dd98-4b26-a95e-f3ef9d03984e" />
+
+how to win the game:
+<img width="1091" height="636" alt="image" src="https://github.com/user-attachments/assets/cab08adf-fc2a-4684-898f-9892b4f7f4a9" />
+
+gameplay:
+
+https://github.com/user-attachments/assets/5e28cb56-1117-490e-949d-3493e56fd00a
+
+
+
 "02_Family_Tree": A family tree builder using concurrent programming techniques.
 
 "03_Train_Problem": A system for managing trains that can operate concurrently and avoid collisions.
