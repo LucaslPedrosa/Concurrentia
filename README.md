@@ -1,4 +1,3 @@
-<img width="953" height="316" alt="inicio" src="https://github.com/user-attachments/assets/53af9d7d-a41e-4837-8c38-f8591d4abb64" />
 ﻿# Concurrentia
  
 Concurrentia is a GitHub project that contains multiple programming problems related to concurrency. These problems have been implemented and are ready to be used as learning resources or as benchmarks for testing concurrency control protocols and synchronization techniques.
